@@ -8,7 +8,7 @@ line="Last updated on ${timestamp}"
 
 files=(
   "README.md"
-  "README-zh.md"
+  "README-en.md"
 )
 
 for rel_path in "${files[@]}"; do

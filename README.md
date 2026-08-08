@@ -4,605 +4,605 @@ Last updated on 2026-08-08 12-00-00
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE) [![GitHub stars](https://img.shields.io/github/stars/DSeaStar/awesome-kling?style=social)](https://github.com/DSeaStar/awesome-kling/stargazers)
 
-| [English](./README.md) | [简体中文](./README-zh.md) |
+| [简体中文](./README.md) | [English](./README-en.md) |
 
-> A curated collection of the **best Kling AI / Kling 3.0 prompts**, **text-to-image (T2I)** fashion briefs, video generation techniques, Motion Control workflows, and developer resources for **Kuaishou Kling**.
+> **可灵 Kling AI / Kling 3.0** 优质提示词、**文生图（T2I）** 时尚肖像、视频生成技巧、运动控制工作流与开发者资源的精选集合（快手可灵）。
 
-This repository focuses on **high-fidelity Kling prompts** for T2I portraits, cinematic film, advertising, UGC, anime, short drama, and VFX — plus **API guides**, SDKs, and production workflows so you can ship real products on top of Kling.
+本仓库专注于**高保真 Kling 提示词**：T2I 肖像、电影感、广告、UGC、动漫、短剧、特效，以及 **API / SDK / 生产工作流**，帮助你把可灵真正用到产品和内容流水线里。
 
-Inspired by [awesome-seedance](https://github.com/ZeroLu/awesome-seedance).
-
----
-
-## 📖 Table of Contents
-
-1. [Prompt Formula (Start Here)](#1-prompt-formula-start-here)
-2. [Cinematic Film Styles](#2-cinematic-film-styles)
-3. [Advertising & Commercial Branding](#3-advertising--commercial-branding)
-4. [Social Media & Viral Memes](#4-social-media--viral-memes)
-5. [UGC Style](#5-ugc-style)
-6. [Anime & Animation Styles](#6-anime--animation-styles)
-7. [Short-form Drama & Web Series](#7-short-form-drama--web-series)
-8. [Visual Effects & Experimental Styles](#8-visual-effects--experimental-styles)
-9. [Motion Control & Character Consistency](#9-motion-control--character-consistency)
-10. [Text-to-Image (T2I)](#10-text-to-image-t2i)
-11. [Resources (API, SDK & How-to-use)](#11-resources)
-12. [Contributing](#12-contributing)
-13. [Star History](#13-star-history)
+结构与风格参考 [awesome-seedance](https://github.com/ZeroLu/awesome-seedance)。
 
 ---
 
-## 1. Prompt Formula (Start Here)
+## 📖 目录
 
-Kling 3.0 responds best to **cinematic direction**, not keyword soup. Full breakdown: [`prompts/prompt-formula.md`](./prompts/prompt-formula.md).
+1. [提示词公式（从这里开始）](#1-提示词公式从这里开始)
+2. [电影风格](#2-电影风格)
+3. [广告与商业品牌](#3-广告与商业品牌)
+4. [社交媒体与病毒模因](#4-社交媒体与病毒模因)
+5. [UGC 风格](#5-ugc-风格)
+6. [动漫与动画风格](#6-动漫与动画风格)
+7. [短剧与网剧](#7-短剧与网剧)
+8. [视觉特效与实验风格](#8-视觉特效与实验风格)
+9. [运动控制与角色一致性](#9-运动控制与角色一致性)
+10. [文生图（T2I）](#10-文生图t2i)
+11. [资源 (API、SDK 与使用指南)](#11-资源)
+12. [贡献指南](#12-贡献指南)
+13. [Star 历史](#13-star-历史)
 
-### Core template
+---
+
+## 1. 提示词公式（从这里开始）
+
+Kling 3.0 更吃**分镜式导演语言**，而不是关键词堆砌。完整说明见：[`prompts/prompt-formula.md`](./prompts/prompt-formula.md)。
+
+### 核心模板
 
 ```text
-[Subject], [Action], in [Setting].
-Camera: [shot type], [movement], [lens / DOF].
-Lighting: [key light], [mood].
-Style: [film reference], photorealistic, high detail, 4K.
-Audio (optional): [dialogue / SFX / ambience].
+[主体], [动作], 场景在 [环境]。
+镜头：[景别], [运镜], [焦距/景深]。
+光影：[主光], [氛围]。
+风格：[电影参考], 写实, 高细节, 4K。
+音频（可选）：[对白 / 音效 / 环境音]。
 ```
 
-### Multi-shot template (Kling 3.0 strength)
+### 多镜头模板（Kling 3.0 强项）
 
 ```text
-Duration: 10s. Multi-shot sequence. Keep wardrobe and weather consistent.
+时长：10 秒。多镜头叙事。服装与天气全程一致。
 
-[0-3s] Shot 1 — Extreme wide establishing:
+[0-3s] 镜头 1 — 极远景建立：
 ...
 
-[3-7s] Shot 2 — Medium tracking:
+[3-7s] 镜头 2 — 中景跟拍：
 ...
 
-[7-10s] Shot 3 — Extreme close-up:
+[7-10s] 镜头 3 — 极特写：
 ...
 ```
 
-### Image-to-Video template
+### 图生视频模板
 
 ```text
-Animate the subject in the reference image.
-Motion: [specific motion].
-Camera: [push-in / pan / orbit / static].
-Keep face identity, clothing, and background layout consistent.
-Natural motion blur, realistic physics, photorealistic.
+根据参考图中的主体进行动画。
+动作：[具体动作]。
+运镜：[推进 / 横移 / 环绕 / 固定]。
+保持人脸身份、服装与构图一致。
+自然运动模糊，真实物理，写实质感。
 ```
 
-Commercial playbooks (CN): [`prompts/commercial-use-cases.md`](./prompts/commercial-use-cases.md)
+商用玩法合集：[`prompts/commercial-use-cases.md`](./prompts/commercial-use-cases.md)
 
 ---
 
-## 2. Cinematic Film Styles
+## 2. 电影风格
 
-Professional cinematic approaches optimized for **Kling 3.0** multi-shot and native audio.
+面向 **Kling 3.0** 多镜头与原生音频优化的专业电影提示词。
 
-### 2.1. Hollywood Night Rain Racing
+### 2.1. 好莱坞夜雨赛车
 
-*Le Mans energy — dual-driver tension, wet asphalt, green-light launch.*
-
-**Prompt:**
+**提示词：**
 ```text
-Style: Hollywood professional racing film, cinematic night rain, high stakes.
-Duration: 12s. Multi-shot.
+风格：好莱坞专业赛车电影，电影感夜雨，高风险竞技。
+时长：12 秒。多镜头。
 
-[0-4s] Shot 1 — Interior close-up: veteran driver in helmet, rain lashes windshield, dashboard lights on visor, calm nod, mouths "Let's go."
-[4-8s] Shot 2 — Rival cockpit: younger driver grips wheel, heavy breathing, adrenaline eyes, whispers "Focus."
-[8-12s] Shot 3 — Wide action: starting lights turn green, both cars accelerate on wet asphalt, water sprays into lens, stadium lights streak with motion blur.
+[0-4s] 镜头 1 — 车内特写：老将戴头盔，雨水拍打挡风玻璃，仪表灯映在面罩，冷静点头，口型 "出发吧"。
+[4-8s] 镜头 2 — 对手驾驶舱：年轻车手紧握方向盘，呼吸沉重，低语 "专注"。
+[8-12s] 镜头 3 — 远景动作：绿灯亮起，两车在湿沥青上同步加速，水花溅镜头，体育场灯光拖成光轨。
 
-Photorealistic, IMAX feel, coherent faces, natural rain physics, 4K.
+写实，IMAX 感，人脸稳定，雨水物理真实，4K。
 ```
 
-### 2.2. Denis Villeneuve Desert Escape
+### 2.2. 维伦纽瓦式沙漠逃离
 
-*Epic scale, desaturated palette, nature vs. machine.*
-
-**Prompt:**
+**提示词：**
 ```text
-Style: IMAX 70mm, Denis Villeneuve, gritty realism, desaturated, epic scale.
-Duration: 12s.
+风格：IMAX 70mm，丹尼斯·维伦纽瓦，颗粒写实，低饱和，史诗规模。
+时长：12 秒。
 
-[0-4s] Extreme wide: colossal sandstorm miles high swallows desert; tiny armored convoy races away; Hans Zimmer–style tension.
-[4-8s] Cockpit cam: pilot screams "GO! GO!", violent camera shake, sand blasts windshield, sun blocked by dust wall.
-[8-12s] Climax: rover launches off dune in slow motion, silhouette against dark storm, lightning inside dust cloud, debris past lens, cut to black.
+[0-4s] 极远景：数英里高沙尘暴吞没沙漠，小队装甲车狂奔逃离。
+[4-8s] 驾驶舱：驾驶员尖叫 "走！快走！"，镜头剧烈晃动，沙打挡风玻璃，太阳被尘墙吞没。
+[8-12s] 高潮：越野车冲上沙丘腾空慢动作，风暴剪影，尘云闪电，碎片掠镜头，切黑。
 
-Photorealistic, catastrophic scale, stable vehicle geometry.
+写实，灾难级规模，载具几何稳定。
 ```
 
-### 2.3. Wong Kar-wai Rainy Phone Booth
+### 2.3. 王家卫雨夜电话亭
 
-*Nostalgic Hong Kong art-cinema mood with emotional restraint.*
-
-**Prompt:**
+**提示词：**
 ```text
-Film style: 90s Hong Kong art cinema, retro film grain, high ISO, amber-green color cast, melancholic.
+电影风格：90 年代香港艺术电影，复古胶片颗粒，高 ISO，琥珀-绿色调，忧郁。
 
-Core emotional line (for performance): "If memories were canned food, I hope they never expire."
-Duration: 10s.
+核心情感对白："如果记忆是一个罐头，我希望它永远不会过期。"
+时长：10 秒。
 
-[0-4s] Through rain-streaked glass of a red phone booth; figure in khaki trench coat holds receiver, eyes hollow yet deep; rain distorts face like oil paint.
-[4-7s] Extreme close-up on lips and half face; soft whisper into receiver; neon bokeh drifts across skin.
-[7-10s] Hangs up, walks into rainy crowd; frame-step / trailing motion blur on the back; city light trails.
+[0-4s] 透过布满雨水的红色电话亭玻璃；风衣人紧握听筒，眼神空洞却深情；雨水扭曲面部如油画。
+[4-7s] 唇部与半脸极特写；对着听筒轻声耳语；霓虹虚化光点流过皮肤。
+[7-10s] 挂断电话走入雨中人群；背影抽帧拖影；城市车灯光轨。
 
-Handheld, shallow DOF, emotionally intense, photorealistic film look.
+手持，浅景深，情感浓烈，胶片写实。
 ```
 
-### 2.4. Neon Tokyo Rain Sequence
+### 2.4. 霓虹东京雨夜序列
 
-*Blade Runner 2049 lighting language with timed shot escalation.*
-
-**Prompt:**
+**提示词：**
 ```text
-[0-4s] Wide establishing, static: neon-drenched Tokyo alley at night, heavy rain, reflections on wet asphalt, distant traffic murmur.
-[4-8s] Medium, slow dolly forward: figure in black trench coat walks toward camera under red paper umbrella, neon flickering on face.
-[8-12s] Close-up tracking: umbrella drops, rain hits face, looks up; rain sound intensifies.
-[12-15s] Extreme close-up: raindrops hit neon puddle in slow motion, rings of reflected color, bass fades to silence.
+[0-4s] 远景固定：霓虹东京小巷夜雨，湿沥青倒影，远处车流低语。
+[4-8s] 中景慢推：黑风衣人撑红纸伞走向镜头，霓虹在脸上闪烁。
+[8-12s] 跟拍特写：伞落下，雨打脸，抬头；雨声增强。
+[12-15s] 极特写：雨点落入霓虹水洼慢动作，彩色涟漪，低音淡出至静。
 
-Hyper-realistic, 8K feel, Blade Runner 2049 cinematography, Roger Deakins lighting.
+写实，《银翼杀手 2049》光影，罗杰·迪金斯式布光。
 ```
 
-### 2.5. Samurai at Sunset (Time-coded)
+### 2.5. 日落武士（时间码）
 
-*Hitchcock vertigo + Kurosawa scale in one 15s beat.*
-
-**Prompt:**
+**提示词：**
 ```text
-[0-4s] Low-angle wide, static: lone samurai silhouetted against blood-red sunset on windswept ridge, tall grass bending, distant thunder.
-[4-8s] Dolly zoom on face as realization hits — background warps (vertigo effect), drums building.
-[8-12s] Whip pan into crane rise: army of a thousand torches advancing in the valley, war horns, smoke.
-[12-15s] Extreme close-up: hand grips katana hilt, knuckles white, single sweat drop in slow motion, blade draw ring, then silence.
+[0-4s] 仰角远景固定：孤独武士剪影立于血色日落山脊，长草被风吹弯，远雷。
+[4-8s] 人脸推拉变焦（眩晕效果），背景拉伸，鼓点升起。
+[8-12s] 急摇接升起摇臂：山谷千点火炬大军推进，号角与烟尘。
+[12-15s] 极特写：手握刀柄指节发白，一滴汗慢动作，拔刀声后死寂。
 
-Hyper-realistic, 8K, Akira Kurosawa cinematography.
+写实，黑泽明摄影语言，8K 质感。
 ```
 
-### 2.6. Jazz Pianist with Native Audio
+### 2.6. 爵士钢琴家（原生音频）
 
-*Performance scene — use Kling native audio / dialogue-friendly phrasing.*
-
-**Prompt:**
+**提示词：**
 ```text
-Close-up of a jazz pianist's hands flying across a grand piano in a smoky nightclub. Each keystroke ripples warm amber light on lacquered wood. Camera slowly pulls back to reveal upright bass, brushed drums, tenor saxophone. Musicians trade solos, nodding. Cigarette smoke curls through a single spotlight.
+烟雾夜店中，爵士钢琴家双手在三角钢琴上飞舞的特写。每个琴键激起温暖琥珀色光纹。镜头缓缓拉远，露出低音提琴、刷子鼓、次中音萨克斯。乐手互视点头交换 solo。一束追光里烟雾卷曲。
 
-Hyper-realistic, intimate jazz club, 4K.
-Audio: crisp piano attack, walking bassline, brushed snare, breathy sax melody, room reverb.
+写实，私密爵士吧氛围，4K。
+音频：清晰钢琴起音、行走贝斯、刷军鼓、气声萨克斯、空间混响。
 ```
 
 ---
 
-## 3. Advertising & Commercial Branding
+## 3. 广告与商业品牌
 
-Use **Kling AI** for product showcases, brand films, and high-end commercials.
+用 **Kling AI** 做产品展示、品牌片与高端广告。
 
-### 3.1. Luxury Perfume Commercial (Time-coded)
+### 3.1. 奢侈香水广告（时间码）
 
-**Prompt:**
+**提示词：**
 ```text
-(0-3s) Macro of luxury perfume bottle among pink peonies, shallow DOF, petals floating in warm afternoon light, soft ambient music.
-(3-7s) Camera glides closer; feminine hand enters from right, fingers touch glass; silk rustle.
-(7-12s) Slow-motion spray: golden mist against dark background, atomizer hiss, rim light on particles.
-(12-15s) Pull-out to hero frame, product centered, volumetric light, cream minimal background, elegant silence.
+(0-3s)  macro：奢侈香水瓶与粉色牡丹，浅景深，暖午后光，花瓣漂浮，轻柔环境乐。
+(3-7s) 镜头滑近；女性手从右侧入画轻触瓶身；丝绸摩擦声。
+(7-12s) 慢动作喷雾：金色雾气，暗背景轮廓光，雾化器嘶声。
+(12-15s) 拉出英雄定格，产品居中，体积光，奶油色极简背景，优雅静音。
 
-Hyper-realistic fashion commercial, 8K feel, product-stable geometry.
+写实时尚广告，产品几何稳定。
 ```
 
-### 3.2. Sports Drink Ad
+### 3.2. 运动饮料广告
 
-**Prompt:**
+**提示词：**
 ```text
-Generate a premium 12-second sports drink commercial for the product in the reference image.
-[0-3s] Macro: ice beads sliding down the bottle, side rim light, shallow DOF.
-[3-7s] Athlete opens the bottle and drinks, slow-motion splash, urban track bokeh.
-[7-10s] Fast cuts: sprint, high-five, bottle hero spin.
-[10-12s] Product lockup, clean background, space for slogan.
+为参考图中的运动饮料生成 12 秒高端广告。
+[0-3s] 微距：冰珠沿瓶身滑落，侧逆光，浅景深。
+[3-7s] 运动员拧开痛饮，慢动作水花，城市跑道虚化。
+[7-10s] 快剪：冲刺、击掌、瓶身旋转 hero shot。
+[10-12s] 产品定格，干净背景，预留 slogan 空间。
 
-Brisk pacing, high-end commercial grade, 4K, consistent bottle design.
+节奏明快，商业调色，4K，瓶身一致。
 ```
 
-### 3.3. Minimal Brand Lifestyle Film
+### 3.3. 极简品牌生活方式片
 
-**Prompt:**
+**提示词：**
 ```text
-Create a 15-second lifestyle brand film for a minimalist home brand.
-Natural indoor daylight, real people, no heavy filters.
-Product appears naturally inside everyday scenes — no hard-sell overlays.
-Camera: slow push-ins and empty-frame transitions.
-Nordic / Japanese minimal aesthetic, calm voiceover space, soft ambient room tone.
+为极简家居品牌生成 15 秒生活方式宣传片。
+自然室内日光，真实人物，无重滤镜。
+产品自然出现在生活场景，不做硬广贴片。
+运镜：缓慢推近 + 空镜过渡。
+北欧/日系极简美学，平静旁白留白，柔和环境音。
 ```
 
-### 3.4. Drone Product Replacement Ad
+### 3.4. 无人机广告复刻（产品替换）
 
-**Prompt:**
+**提示词：**
 ```text
-Match the shot design and editing rhythm of reference video @video1.
-Replace every product with the drone in reference image @image1.
-Multi-angle showcase of body, propellers, and flight moment.
-Color grade: blue and black. New VO and music about drone performance.
-Keep product identity stable across all shots.
+模仿参考视频 @video1 的分镜与剪辑节奏。
+将所有产品替换为参考图 @image1 中的无人机。
+多角度展示机身、螺旋桨与飞行瞬间。
+主色蓝黑。旁白与音乐改为介绍无人机性能。
+全片产品身份保持一致。
 ```
 
-More commercial recipes: [`prompts/commercial-use-cases.md`](./prompts/commercial-use-cases.md)
+更多商用玩法：[`prompts/commercial-use-cases.md`](./prompts/commercial-use-cases.md)
 
 ---
 
-## 4. Social Media & Viral Memes
+## 4. 社交媒体与病毒模因
 
-Attention-first vertical and meme-ready setups for short platforms.
+短视频平台的注意力优先与 meme 向提示词。
 
-### 4.1. Giant Orange Cat City Meme
+### 4.1. 巨型橘猫城市 meme
 
-**Prompt:**
+**提示词：**
 ```text
-Style: mockumentary mobile vlog, hyperrealistic CG + real city, 8K fur physics.
-Duration: 15s. Vertical 9:16 preferred.
+风格：伪纪录片手机 vlog，超写实 CG + 真实城市，8K 毛发物理。
+时长：15 秒。优先竖屏 9:16。
 
-[0-5s] Bustling city street; camera tilts up to reveal a Godzilla-sized orange tabby stuck between skyscrapers, waving paws pitifully; glass deforms under huge paw pads.
-[5-10s] Ground POV: traffic flows; giant cat sniffs a bus; driver calmly pets its nose; cat sneezes, blowing hats and leaves.
-[10-15s] Cat squeezes free, sits on a bridge making it sag slightly, then lazily grooms itself blocking rush hour; freeze on innocent eyes.
+[0-5s] 繁忙街景，镜头上抬：哥斯拉级橘猫卡在两栋楼之间，可怜挥爪，巨型肉垫压弯玻璃幕墙。
+[5-10s] 地面视角：车流中橘猫凑近嗅公交车，司机冷静摸它鼻子，它打喷嚏吹飞帽子树叶。
+[10-15s] 挤出楼缝坐上跨江桥导致桥面微沉，懒洋洋舔毛堵住晚高峰；定格无辜大眼。
 
-Comedic, photoreal physics, stable giant-scale lighting.
+喜剧向，写实物理，巨型尺度光影成立。
 ```
 
-### 4.2. Street Argument with On-screen Emphasis
+### 4.2. 街头抬杠（强调口型）
 
-**Prompt:**
+**提示词：**
 ```text
-Tight medium shot of two eccentric adults on a rainy street corner in heated conversation.
-One in oversized trench coat gestures wildly and says: "It's not just a pretzel — it's a sourdough pretzel!"
-The other in denim jacket replies: "Who cares. A pretzel's a pretzel!"
-Clear lip-sync, natural rain ambience, meme-ready framing, photorealistic.
+雨中街角中景：两个怪人激烈争论。
+风衣人大动作比划："这可不是普通椒盐卷饼——是酸面团椒盐卷饼！"
+牛仔夹克回："谁在乎，卷饼就是卷饼！"
+口型清晰，自然雨声，meme 构图，写实。
 ```
 
-### 4.3. One-Take Hook Vertical
+### 4.3. 一镜到底竖屏钩子
 
-**Prompt:**
+**提示词：**
 ```text
-Vertical 9:16, 8 seconds, single continuous take.
-Creator looks into lens in a messy bedroom, suddenly freezes mid-sentence, eyes widen, slowly turns to off-screen crash sound, then sprints out of frame.
-Handheld phone aesthetic, natural noise, no music until the last beat drop.
-```
-
----
-
-## 5. UGC Style
-
-User-generated aesthetics — phone camera energy with controlled surreal twists.
-
-### 5.1. Bathroom Mirror Glitch Vlog
-
-**Prompt:**
-```text
-Style: mockumentary vlog, hyperreal, fixed-camera real-shot feel, natural bathroom light, light suspense-comedy.
-Duration: 15s.
-
-[0-6s] Young woman brushes teeth in front of bathroom mirror, funny faces; reflection is perfectly normal and synced.
-[6-11s] She spits, turns to leave; her reflection STAYS, raises an eyebrow mischievously for 2 seconds, then panics and fast-forwards to catch up before vanishing.
-[11-15s] She stops at the door, turns back; mirror is empty and normal; confused look to camera; freeze.
-
-Must feel like a "network delay" of the reflection, photoreal, no horror gore.
-```
-
-### 5.2. Product Unboxing UGC
-
-**Prompt:**
-```text
-Phone selfie angle, slightly messy desk, natural window light.
-Creator opens a package, genuine surprise reaction, holds product to camera, rotates it, points to 2 features while talking.
-Casual English dialogue: "Okay wait — this packaging is actually insane."
-UGC realism, mild handheld shake, authentic skin texture, 9:16.
-```
-
-### 5.3. Reference Character Speaks Audio
-
-**Prompt:**
-```text
-Place the person from [Image2] inside the interior of [Image1], keeping the style of [Image2] but the realism of [Image1].
-They say the line from [Audio1] with clear lip-sync.
-Natural room light, stable identity, subtle head motion, photorealistic.
+竖屏 9:16，8 秒，一镜到底。
+创作者在凌乱卧室对镜头说话，说到一半突然僵住，眼睛瞪大，慢慢转向画外撞击声，然后冲出画面。
+手机手持质感，自然噪声，最后一拍才出现卡点音。
 ```
 
 ---
 
-## 6. Anime & Animation Styles
+## 5. UGC 风格
 
-Character action, style consistency, and dynamic motion tests.
+用户生成内容美学——手机摄影感 + 可控超现实。
 
-### 6.1. Martial Arts Tournament Clash
+### 5.1. 浴室镜子故障 vlog
 
-**Prompt:**
+**提示词：**
 ```text
-Figure 1 battles Figure 2 in a World Martial Arts Tournament arena.
-Dynamic anime cinematography, speed lines, impact frames, dust and debris.
-Keep both character designs consistent with input images.
-Fast cuts between wide clash, close-up grit, and final blow freeze.
+风格：伪纪录片 vlog，超写实，固定机位实拍感，自然浴室光，轻度悬疑喜剧。
+时长：15 秒。
+
+[0-6s] 女生在浴室镜前刷牙做鬼脸，镜中倒影完全同步正常。
+[6-11s] 吐掉泡沫转身离开；镜中倒影不动，坏笑挑眉停 2 秒，再慌张快进追上后消失。
+[11-15s] 她在门口察觉不对回头；镜子已正常空镜；困惑看向镜头；定格。
+
+必须像倒影「网络延迟」，写实，无血腥恐怖。
 ```
 
-### 6.2. Otter Mecha Anime Battle
+### 5.2. 产品开箱 UGC
 
-**Prompt:**
+**提示词：**
 ```text
-An anime sequence where an otter climbs into a large mech: quick cuts of gears and mechanical parts locking.
-The otter gives a grim thumbs up, then pilots the mech into battle against a marble octopus.
-Dynamic camera, cel-shaded highlights, kinetic action, coherent mecha design.
+手机自拍角度，略乱桌面，自然窗光。
+创作者拆快递，真实惊喜反应，把产品凑近镜头旋转，边说边指 2 个卖点。
+口语："等等——这包装也太夸张了吧。"
+UGC 真实感，轻微手持晃动，真实肤质，9:16。
 ```
 
-### 6.3. Van Gogh Living Painting
+### 5.3. 参考角色念指定音频
 
-**Prompt:**
+**提示词：**
 ```text
-Style: Van Gogh post-impressionism oil painting, heavy impasto, swirling brushstrokes, high-saturation blue-yellow contrast.
-Duration: 12s animation.
-
-Night sky with huge yellow celestial bodies; nebulae swirl like rivers.
-Foreground cypress twists like black flame; valley town windows glow warm yellow.
-Entire world slowly flows and breathes along brushstroke directions.
-
-Painterly motion, no photoreal faces, dreamy atmosphere.
-```
-
-### 6.4. Motion Graphics from Style Boards
-
-**Prompt:**
-```text
-Create motion-graphics animation inspired by traditional animation techniques.
-Based on the three style examples in the reference images, produce a short animated sequence that captures classic animation energy with modern smoothness.
-Bold shapes, clean timing, snappy transitions.
+把 [Image2] 的人物放入 [Image1] 的室内，保持 [Image2] 的造型风格与 [Image1] 的写实感。
+人物说出 [Audio1] 的台词，口型清晰。
+自然室内光，身份稳定，轻微头部动作，写实。
 ```
 
 ---
 
-## 7. Short-form Drama & Web Series
+## 6. 动漫与动画风格
 
-Mini-drama hooks optimized for vertical feeds and emotional beats.
+角色动作、风格一致性与动态运动测试。
 
-### 7.1. Rainy Night Emotional Mini-Drama
+### 6.1. 武道大会对决
 
-**Prompt:**
+**提示词：**
 ```text
-Style: popular Chinese mini-drama, fast-cut rhythm, high attractiveness filter, romantic heartbreak, rainy night.
-Duration: 15s. Vertical 9:16.
-
-Characters: wealthy male lead (black coat, wet hair, red-rimmed eyes) vs stubborn female lead (white dress, tears).
-
-[0-5s] Female lead turns to leave; male grabs wrist; she turns back, love-hate eyes. Lip-sync: "Let go! We're done!"
-[5-10s] Rain streams down faces; he raises a ring/document, fingers trembling. Lip-sync: "Look carefully! I never deceived you!"
-[10-15s] Her pupils shake, covers mouth; he pulls her into a tight embrace; camera orbits them. Soft sobs.
-
-Cinematic rain, stable faces, clear lip-sync.
+Figure 1 与 Figure 2 在世界武道大会擂台对决。
+动态动漫运镜，速度线，打击定格，尘土碎石。
+两名角色造型与输入图一致。
+在远景对撞、表情特写与最终一击之间快切。
 ```
 
-### 7.2. Viral CEO Reversal (Vertical)
+### 6.2. 水獭机甲动漫战
 
-**Prompt:**
+**提示词：**
 ```text
-Style: viral CEO "satisfying drama", vertical portrait, high saturation, extreme facial close-ups.
-Duration: 15s.
-
-[0-5s] Wedding venue: mother-in-law slams divorce paper onto groom's chest; guests laugh; she pokes his forehead. Lip-sync: "No car, no house? Take this cash and leave!"
-[5-10s] Groom smirks, tears the paper; helicopter roar; wind messes her hair; his aura flips dominant. Lip-sync: "This marriage ends only if I say so."
-[10-15s] Doors kick open; bodyguards roll red carpet; butler bows with black card. Lip-sync: "Welcome back, Young Master — assets unfrozen!"
-
-Dramatic lighting, clear emotional beats, photoreal.
+动漫段落：水獭进入大型机甲，快速切换齿轮零件咬合特写。
+水獭冷酷竖拇指，驾驶机甲起飞与大理石章鱼作战。
+动态镜头，赛璐璐高光，动作有力，机甲设计连贯。
 ```
 
-### 7.3. 10s Stage Sketch Comedy
+### 6.3. 梵高活油画
 
-**Prompt:**
+**提示词：**
 ```text
-10-second variety-show stage sketch: two historical-costume characters on a modern talk-show sofa, New Year red-gold LED walls.
-Quick OTS comedy cuts, exaggerated eye-rolls, one modern Bluetooth earbud contrast gag.
-Audience laugh lighting pulse, confetti ending, 16:9 stage camera language.
+风格：梵高后印象派油画，厚涂，漩涡笔触，高饱和蓝黄对比。
+时长：12 秒动画。
+
+夜空中巨大黄色天体，星云如河流旋转。
+前景柏树如黑色火焰扭曲；山谷小镇窗户暖黄光。
+整个世界沿笔触方向缓慢流动呼吸。
+
+绘画运动，非写实人脸，梦幻氛围。
 ```
 
----
+### 6.4. 风格板动态图形
 
-## 8. Visual Effects & Experimental Styles
-
-Spectacle, physics, and surreal concepts.
-
-### 8.1. Sky Zipper Surrealism
-
-**Prompt:**
+**提示词：**
 ```text
-Style: surrealism, megalophobia, Hollywood VFX quality, ultra-realistic light.
-Duration: 15s.
-
-[0-5s] Perfect blue sky over a city; camera tilts up; a giant metallic zipper appears across the horizon.
-[5-10s] Translucent god-scale hand unzips the sky with a roar; blue sky fabric peels; behind it: neon cyberpunk world with flying cars and megastructures.
-[10-15s] Pull back: our entire city is a glass snow-globe on a giant's desk; giant leans in to observe.
-
-Photoreal VFX, coherent scale transitions.
-```
-
-### 8.2. Orbital Station Collision
-
-**Prompt:**
-```text
-Catastrophic collision between two massive space stations in low Earth orbit.
-Metal shears in slow motion; debris spirals; modules crumple; atmosphere crystallizes into vacuum bursts.
-Camera tumbles through wreckage as an EVA astronaut ragdolls past.
-Earth looms serene in background.
-
-Hyper-realistic, orbital debris logic, Gravity-film energy, 8K feel.
-```
-
-### 8.3. Simple I2V Physics
-
-**Prompt:**
-```text
-Animate this image with believable physics.
-Subtle environmental motion first (wind, cloth, particles), then primary subject action.
-Preserve composition and identity. Natural motion blur. Photorealistic.
-```
-
-### 8.4. Fluid Morph Between Photos
-
-**Prompt:**
-```text
-Create fluid morphs between all reference photos.
-Seamless identity transitions, continuous camera energy, no hard cuts, dreamlike but structured motion.
+受传统动画技法启发，创作 motion graphics 动画。
+根据参考图中的三组风格样例，输出短动画序列，保留经典动画节奏与现代流畅度。
+造型大胆，时间点干脆，转场利落。
 ```
 
 ---
 
-## 9. Motion Control & Character Consistency
+## 7. 短剧与网剧
 
-Kling-native strengths: **Motion Control**, **Elements / subject binding**, multi-image reference, and identity lock.
+竖屏情绪钩子与爽剧结构。
 
-### 9.1. Motion Control Retarget
+### 7.1. 雨夜情感短剧
 
-**Prompt:**
+**提示词：**
 ```text
-Use the motion reference video for body dynamics, timing, and camera energy.
-Apply that motion to the character in the image reference.
-Preserve identity, face, and clothing from the image; ignore the motion video's identity.
-Smooth retargeting, no limb distortion, cinematic lighting, photorealistic.
+风格：热门中文微短剧，极速剪辑，高吸引力滤镜，虐恋雨夜。
+时长：15 秒。竖屏 9:16。
+
+角色：深情霸总男主（黑风衣、湿发、红眼眶）vs 决绝女主（白裙、泪脸）。
+
+[0-5s] 女主转身离开；男主抓住手腕；她回眸爱恨交织。口型："放开！我们结束了！"
+[5-10s] 雨水顺脸流下；他掏出戒指/文件高举，手指颤抖。口型："你看清楚！我从没骗过你！"
+[10-15s] 女主瞳孔震动捂嘴；男主猛然抱紧；镜头环绕。低声啜泣。
+
+电影感雨戏，人脸稳定，口型清晰。
 ```
 
-### 9.2. Character Series Consistency
+### 7.2. 竖屏霸总反转
 
-**Prompt:**
+**提示词：**
 ```text
-Keep the same character identity from the element/reference images across all shots.
-Shot A: quiet classroom window monologue.
-Shot B: hallway chase, handheld urgency.
-Shot C: rooftop confrontation at golden hour.
-Same wardrobe, same face, coherent age and hairstyle.
-Anime-cinematic or photoreal as specified by references.
+风格：竖屏爽剧霸总，高饱和，极致面部特写。
+时长：15 秒。
+
+[0-5s] 婚礼现场：岳母把离婚协议砸到新郎胸口，宾客哄笑，指戳额头。口型："没车没房还想娶我女儿？拿着这点钱滚！"
+[5-10s] 新郎冷笑撕纸；直升机轰鸣；风吹乱岳母发型；气场瞬间翻盘。口型："这门亲事，只有我说了算。"
+[10-15s] 大门被踹开，保镖铺红毯；管家鞠躬递上黑卡。口型："少爷，资产已解冻，欢迎回家！"
+
+戏剧光影，情绪节拍清楚，写实。
 ```
 
-### 9.3. Fashion Lookbook with Elements
+### 7.3. 10 秒舞台小品
 
-**Prompt:**
+**提示词：**
 ```text
-Same model identity throughout.
-Three outfits from reference images appear in sequence with beat-synced cuts.
-Each look: walk cycle medium shot + full-body hero pose + fabric detail close-up.
-Clean studio, soft fashion lighting, vertical 9:16.
-```
-
-### 9.4. Multi-Reference Scene Build
-
-**Prompt:**
-```text
-Combine references: character from @image1, location from @image2, product from @image3.
-Character walks through the location, naturally interacts with the product, glances to camera, slight smile.
-Stable multi-subject consistency, photoreal, gentle steadicam follow.
+10 秒综艺舞台小品：两位古装角色坐在现代脱口秀沙发上，背后新年红金 LED。
+肩上视角快速喜剧切镜，夸张白眼，一只现代蓝牙耳机反差梗。
+观众笑声灯光脉冲，撒金箔收尾，16:9 舞台镜头语言。
 ```
 
 ---
 
-## 10. Text-to-Image (T2I)
+## 8. 视觉特效与实验风格
 
-Kling Image / 可灵生图 prompts. Full multi-language packs live under [`prompts/`](./prompts/).
+奇观、物理与超现实概念。
 
-### 10.1. 青空を踏む白 / White Stepping on Blue Sky
+### 8.1. 天空拉链超现实
 
-*Extreme low-angle summer crosswalk fashion portrait — pure white outfit, vivid blue sky, wide-angle leg foreground. Aspect **3:4**.*
-
-![青空を踏む白](./assets/t2i-aozora-wo-fumu-shiro.jpg)
-
-**Prompt (English, paste-ready):**
+**提示词：**
 ```text
-Vertical 3:4 photoreal fashion portrait. Extreme low-angle wide close shot from asphalt height at a wide Japanese summer intersection. Woman in her 20s: right knee down (left of frame), left knee raised high toward camera (right of frame), white chunky lace-up platform sandal filling lower-right foreground with strong wide-angle perspective. Calm downward gaze to the low camera, face slightly tilted. Soft features, elongated brown eyes, natural undereye, soft bright brown brows, clean nose, translucent coral-pink lips; sheer pink-beige eyeshadow, subtle blush. Bright brown shoulder-length medium hair, thin sheer bangs, face-framing layers, light wind in the tips. White thin-strap ribbed cropped camisole with lace trim; white high-waist wrap mini skort with gathers and thin drawstring; white thick-soled lace-up sandals. Left hand resting on raised left knee; right hand near asphalt. Mid-rise buildings, street trees, poles, transformers, tangled wires converging skyward, crosswalk, tiny pedestrians; upper frame vivid blue sky and white cumulus. Hard high summer sun, sharp asphalt shadows. Natural skin texture, clear fabric and sandal-lace detail, sharp face and foreground leg, slightly softer background. Fresh blue-and-white summer grade, warm skin tones, no heavy beauty filter, no exaggerated HDR. Not mirrored.
+风格：超现实主义，巨物恐惧，好莱坞特效质感，极致写实光影。
+时长：15 秒。
+
+[0-5s] 晴朗城市蓝天，镜头上仰，地平线出现巨型金属拉链。
+[5-10s] 半透明巨神之手拉开拉链，蓝天如布剥落，背后是霓虹赛博朋克飞车巨构世界。
+[10-15s] 镜头急拉：整座城市其实是巨人桌上的玻璃微缩球，巨人俯身观察。
+
+写实 VFX，尺度过渡成立。
 ```
 
-**Negative:**
+### 8.2. 轨道空间站碰撞
+
+**提示词：**
 ```text
-mirrored / left-right flip, left hand detached from raised left knee, deformed toes, deformed sandal straps, extra limbs, warped anatomy
+两座巨型空间站在近地轨道灾难性碰撞。
+金属慢动作撕裂；碎片螺旋；舱段压扁；大气在真空中结晶喷射。
+镜头在残骸中翻滚，一名 EVA 宇航员失控飞过。
+地球在背景中宁静巨大。
+
+写实，轨道碎片逻辑，《地心引力》能量，8K 感。
 ```
 
-**Full pack (日本語 / 中文 / English structured + I2V follow-up):**  
+### 8.3. 简单图生视频物理
+
+**提示词：**
+```text
+以可信物理动画这张图。
+先环境微动（风、布料、粒子），再主体主动作。
+保持构图与身份。自然运动模糊。写实。
+```
+
+### 8.4. 多图流体变形
+
+**提示词：**
+```text
+在所有参考照片之间创建流体变形。
+身份过渡无硬切，镜头能量连续，梦幻但有结构。
+```
+
+---
+
+## 9. 运动控制与角色一致性
+
+可灵强项：**运动控制（Motion Control）**、**主体/Elements 绑定**、多图参考与身份锁定。
+
+### 9.1. 运动控制重定向
+
+**提示词：**
+```text
+使用参考视频的肢体动态、节奏与镜头能量。
+将该运动迁移到参考图中的角色上。
+保留参考图身份、面部与服装；忽略运动视频中的人物身份。
+重定向平滑，无肢体崩坏，电影光影，写实。
+```
+
+### 9.2. 角色系列一致性
+
+**提示词：**
+```text
+所有镜头保持 Elements/参考图中的同一角色身份。
+镜头 A：教室窗边独白。
+镜头 B：走廊追逐，手持紧迫感。
+镜头 C：天台黄昏对峙。
+同一服装、同一五官，年龄发型连贯。
+按参考指定为动漫电影感或写实。
+```
+
+### 9.3. Elements 时尚 Lookbook
+
+**提示词：**
+```text
+全程同一模特身份。
+三套服装按参考图顺序卡点切换。
+每套：中景走位 + 全身英雄姿势 + 面料细节特写。
+干净影棚，柔和时尚光，竖屏 9:16。
+```
+
+### 9.4. 多参考拼场景
+
+**提示词：**
+```text
+组合参考：角色来自 @image1，场景来自 @image2，产品来自 @image3。
+角色走过场景，自然与产品互动，看向镜头微微一笑。
+多主体稳定一致，写实，轻缓斯坦尼康跟随。
+```
+
+---
+
+## 10. 文生图（T2I）
+
+可灵生图 / Kling Image 提示词。完整多语言包见 [`prompts/`](./prompts/)。
+
+### 10.1. 青空を踏む白 / 踏蓝天的白
+
+*极端低角度盛夏十字路口时尚肖像——纯白装束、鲜烈蓝天、广角腿部前景。画幅 **3:4**。*
+
+![踏蓝天的白](./assets/t2i-aozora-wo-fumu-shiro.jpg)
+
+**提示词（中文结构版）：**
+```text
+主题：踏蓝天的白
+
+主体：盛夏的城市十字路口，20多岁的女性在路面积水边缘的相机前单膝跪地，对侧膝盖高高抬起，摆出纵向构图的实拍时尚肖像。纯白装束、鲜烈的蓝天、近景中大幅逼近的腿部与凉鞋。
+
+人物・表情：脸庞微微侧倾，平静目光俯视低位相机。柔和轮廓、细长棕色眼眸、自然泪袋、明亮棕色眉毛、整齐鼻梁、珊瑚粉唇。浅粉米色眼妆与淡雅腮红，日系精致自然妆。肩下中长亮棕发、薄透视刘海、脸周层次、发梢随风轻摆。
+
+服装・姿势：白色细肩带罗纹裁剪吊带背心（胸口与肩带蕾丝镶边）；白色高腰裹式迷你裙（一侧褶皱与细抽绳）；白色厚底系带凉鞋。右膝（画面左）贴地，左膝（画面右）高抬向前突出。左手轻置于抬起左膝上，右手自然垂向路面。
+
+背景・光线：日本都市宽阔十字路口；中层办公/商业楼、街树、电线杆、变压器、错综电线、人行横道、远处渺小行人；上部大面积鲜艳蓝天与立体白云。强烈夏日高位阳光，白衣与肌肤明亮，柏油路轮廓分明的阴影。
+
+构图・相机：纵向3:4。相机降至柏油路高度的极端低角度广角近拍。人物居中大幅呈现；头在上部中央；抬起左腿与白凉鞋大幅逼近右下前景。广角远近感强调前景腿脚；建筑与电线向天空收束。面部与前景腿锐利，远景略柔。
+
+质感・风格：高精度实拍。自然肌理与适度光泽；罗纹、蕾丝、褶皱、凉鞋系带、粗糙柏油清晰。蓝白主调，保留肌肤暖色。避免过度美肌与夸张HDR。
+```
+
+**负面提示：**
+```text
+左右翻转；抬起左膝与左手的接触不可脱离；脚趾或凉鞋系带的变形
+```
+
+**完整包（日文 / 中文 / 英文 + I2V 续写）：**  
 [`prompts/t2i-fashion-portraits.md`](./prompts/t2i-fashion-portraits.md)
 
 ---
 
-## 11. Resources
+## 11. 资源
 
-### Official
+### 官方
 
-- [Kling AI (Global)](https://kling.ai/) — Official product
-- [Kling AI (China / Kuaishou)](https://klingai.kuaishou.com/) — CN product entry
-- [Kling VIDEO 3.0 Omni User Guide](https://kling.ai/quickstart/klingai-video-3-omni-model-user-guide) — Multi-modal, multi-shot, native audio
-- [Kling AI Prompt Guide](https://kling.ai/blog/kling-ai-prompt-guide) — Official prompting: camera, lighting, dialogue, multi-shot
-- [Kling Open Platform API Overview](https://kling.ai/document-api/quickStart/productIntroduction/overview) — Official API docs
-- [Text-to-Video API (3.0 Omni)](https://kling.ai/document-api/api/video/3-0-omni/text-to-video) — T2V reference
+- [Kling AI 国际站](https://kling.ai/) — 官方产品
+- [可灵 AI（快手）](https://klingai.kuaishou.com/) — 国内入口
+- [Kling VIDEO 3.0 Omni 使用指南](https://kling.ai/quickstart/klingai-video-3-omni-model-user-guide) — 多模态、多镜头、原生音频
+- [Kling 官方提示词指南](https://kling.ai/blog/kling-ai-prompt-guide) — 镜头、光影、对白、多镜头
+- [可灵开放平台 API 概览](https://kling.ai/document-api/quickStart/productIntroduction/overview) — 官方 API
+- [文生视频 API（3.0 Omni）](https://kling.ai/document-api/api/video/3-0-omni/text-to-video) — T2V 文档
 
-### Prompting guides
+### 提示词指南
 
-- [Kling 3.0 Prompting Guide (fal.ai)](https://blog.fal.ai/kling-3-0-prompting-guide/) — Cinematic intent, structure, API notes
-- [Kling 3.0 Prompt Guide (Atlabs)](https://www.atlabs.ai/blog/kling-3-0-prompting-guide-master-ai-video-generation) — Layered formula + multi-shot patterns
-- In-repo: [`prompts/prompt-formula.md`](./prompts/prompt-formula.md)
-- In-repo: [`prompts/commercial-use-cases.md`](./prompts/commercial-use-cases.md)
-- In-repo: [`prompts/t2i-fashion-portraits.md`](./prompts/t2i-fashion-portraits.md) — T2I fashion portraits
+- [Kling 3.0 Prompting Guide（fal.ai）](https://blog.fal.ai/kling-3-0-prompting-guide/) — 电影意图与结构
+- [Kling 3.0 Prompt Guide（Atlabs）](https://www.atlabs.ai/blog/kling-3-0-prompting-guide-master-ai-video-generation) — 分层公式
+- 本仓库：[`prompts/prompt-formula.md`](./prompts/prompt-formula.md)
+- 本仓库：[`prompts/commercial-use-cases.md`](./prompts/commercial-use-cases.md)
+- 本仓库：[`prompts/t2i-fashion-portraits.md`](./prompts/t2i-fashion-portraits.md) — T2I 时尚肖像
 
-### APIs, SDKs & tooling
+### API、SDK 与工具
 
-| Project | Stars-ish | What it is |
-|---------|-----------|------------|
-| [KlingAIResearch/ComfyUI-KLingAI-API](https://github.com/KlingAIResearch/ComfyUI-KLingAI-API) | ~176 | Official-adjacent ComfyUI nodes for Kling API |
-| [199-mcp/mcp-kling](https://github.com/199-mcp/mcp-kling) | ~40 | MCP server for Kling video generation |
-| [vargHQ/sdk](https://github.com/vargHQ/sdk) | ~333 | JSX video SDK — one API for Kling, Flux, etc. |
-| [vericontext/vibeframe](https://github.com/vericontext/vibeframe) | ~164 | CLI + MCP for agent video gen (Kling, Veo, Seedance…) with cost caps |
-| [gokayfem/ComfyUI-fal-API](https://github.com/gokayfem/ComfyUI-fal-API) | ~203 | ComfyUI nodes for fal.ai models including Kling |
-| [ai-sdk Kling provider](https://ai-sdk.dev/providers/ai-sdk-providers/klingai) | — | Vercel AI SDK provider: T2V, I2V, multi-image, motion control |
-| [fal.ai Kling models](https://fal.ai/models) | — | Hosted Kling 3.0 / o3 endpoints |
-| [yihong0618/klingCreator](https://github.com/yihong0618/klingCreator) | ~220 | Unofficial reverse-engineered client (use at own risk; prefer official API) |
-| [chenwr727/KLing-Video-WatermarkRemover-Enhancer](https://github.com/chenwr727/KLing-Video-WatermarkRemover-Enhancer) | ~157 | Watermark cleanup / enhance pipeline for Kling outputs |
+| 项目 | 说明 |
+|------|------|
+| [KlingAIResearch/ComfyUI-KLingAI-API](https://github.com/KlingAIResearch/ComfyUI-KLingAI-API) | ComfyUI 可灵 API 节点 |
+| [199-mcp/mcp-kling](https://github.com/199-mcp/mcp-kling) | Kling 视频生成 MCP Server |
+| [vargHQ/sdk](https://github.com/vargHQ/sdk) | JSX 视频 SDK，统一调用 Kling 等 |
+| [vericontext/vibeframe](https://github.com/vericontext/vibeframe) | Agent 用视频生成 CLI + MCP（成本上限） |
+| [gokayfem/ComfyUI-fal-API](https://github.com/gokayfem/ComfyUI-fal-API) | fal.ai ComfyUI 节点（含 Kling） |
+| [ai-sdk Kling provider](https://ai-sdk.dev/providers/ai-sdk-providers/klingai) | Vercel AI SDK：T2V / I2V / 多图 / 运动控制 |
+| [fal.ai Kling models](https://fal.ai/models) | 托管 Kling 3.0 / o3 |
+| [yihong0618/klingCreator](https://github.com/yihong0618/klingCreator) | 非官方逆向客户端（有风险，优先官方 API） |
+| [chenwr727/KLing-Video-WatermarkRemover-Enhancer](https://github.com/chenwr727/KLing-Video-WatermarkRemover-Enhancer) | 可灵视频去水印/增强 |
 
-### Prompt collections & production skills
+### 提示词合集与制作技能
 
-- [songguoxs/awesome-video-prompts](https://github.com/songguoxs/awesome-video-prompts) — Veo / Kling / Hailuo prompt pack
-- [LichAmnesia/awesome-ad-video-prompts](https://github.com/LichAmnesia/awesome-ad-video-prompts) — Ad-focused prompts (Kling / Seedance / Veo / Runway)
-- [geekjourneyx/awesome-ai-video-prompts](https://github.com/geekjourneyx/awesome-ai-video-prompts) — Cross-model AI video prompting resources
-- [jnMetaCode/ai-shortfilm-prompts](https://github.com/jnMetaCode/ai-shortfilm-prompts) — Short-film prompt skill (Sora · Kling · Veo · Seedance)
-- [Anil-matcha/awesome-ai-video-models](https://github.com/Anil-matcha/awesome-ai-video-models) — Model / API / price comparison
-- [backblaze-labs/awesome-video-generation](https://github.com/backblaze-labs/awesome-video-generation) — Broader video-generation API landscape
+- [songguoxs/awesome-video-prompts](https://github.com/songguoxs/awesome-video-prompts) — Veo / Kling / Hailuo 提示词
+- [LichAmnesia/awesome-ad-video-prompts](https://github.com/LichAmnesia/awesome-ad-video-prompts) — 广告向提示词
+- [geekjourneyx/awesome-ai-video-prompts](https://github.com/geekjourneyx/awesome-ai-video-prompts) — 跨模型 AI 视频提示资源
+- [jnMetaCode/ai-shortfilm-prompts](https://github.com/jnMetaCode/ai-shortfilm-prompts) — 短片提示词 Skill
+- [Anil-matcha/awesome-ai-video-models](https://github.com/Anil-matcha/awesome-ai-video-models) — 模型 / API / 价格对比
+- [backblaze-labs/awesome-video-generation](https://github.com/backblaze-labs/awesome-video-generation) — 视频生成 API 全景
 
-### Platforms & aggregators
+### 平台与聚合
 
-- [fal.ai](https://fal.ai/) — Serverless inference hosting Kling
-- [Replicate](https://replicate.com/) — Model hosting ecosystem
-- [Pollo AI](https://docs.pollo.ai) — Multi-model video API aggregator
-- [EvoLink Kling docs](https://evolink.ai/docs/en/api-manual/video-series/kling/kling-v3-text-to-video) — Third-party Kling API manual
+- [fal.ai](https://fal.ai/) — Serverless 推理（含 Kling）
+- [Replicate](https://replicate.com/) — 模型托管生态
+- [Pollo AI](https://docs.pollo.ai) — 多模型视频 API 聚合
+- [EvoLink Kling 文档](https://evolink.ai/docs/en/api-manual/video-series/kling/kling-v3-text-to-video) — 第三方 Kling API 手册
 
-### Sibling lists
+### 相关列表
 
-- [ZeroLu/awesome-seedance](https://github.com/ZeroLu/awesome-seedance) — Seedance 2.0 prompt collection (format inspiration for this repo)
+- [ZeroLu/awesome-seedance](https://github.com/ZeroLu/awesome-seedance) — Seedance 2.0 提示词合集（本仓库结构灵感来源）
 
 ---
 
-## 12. Contributing
+## 12. 贡献指南
 
-Contributions are welcome! If you have an **awesome Kling AI prompt** (T2V / I2V / T2I), workflow, or tool, please open a Pull Request.
+欢迎贡献！如果你有**优秀的 Kling 提示词**（T2V / I2V / T2I）、工作流或工具，请提交 Pull Request。
 
-1. Fork the repo.
-2. Create a new branch.
-3. Add your prompt under the correct category with the next available number.
-4. Include **Source** (original creator link) whenever the prompt is not original.
-5. Prefer prompts that state **duration**, **shot structure**, and **camera language**.
-6. Submit PR.
+1. Fork 本仓库
+2. 新建分支
+3. 在对应分类下按序号添加提示词
+4. 非原创请标注 **Source**（原作者链接）
+5. 尽量写明**时长、分镜、运镜**
+6. 提交 PR
 
-### Prompt submission template
+### 提交模板
 
 ```markdown
-### X.Y. Title
-*One-line description.*
+### X.Y. 标题
+*一句话说明。*
 
-**Prompt:**
+**提示词：**
 \`\`\`text
 ...
 \`\`\`
 
-*Source: Name ([@handle](url)) — [Post](url)*
+*来源：名字（[@handle](url)）— [原帖](url)*
 ```
 
-Please do **not** submit copyrighted media you do not have rights to redistribute. Link to sources when possible.
+请勿提交无授权分发的版权媒体；尽量链接到源内容。
 
 ---
 
-## 13. Star History
+## 13. Star 历史
 
 <a href="https://star-history.com/#DSeaStar/awesome-kling&Date">
  <picture>
@@ -614,6 +614,6 @@ Please do **not** submit copyrighted media you do not have rights to redistribut
 
 ---
 
-## License
+## 许可证
 
-[MIT](./LICENSE) — free to use, share, and build on. Prompts retain credit to original creators when sourced.
+[MIT](./LICENSE) — 可自由使用、分享与二次创作。引用他人提示词时请保留原作者署名。
