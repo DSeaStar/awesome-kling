@@ -8,7 +8,7 @@ Last updated on 2026-08-08 12-00-00
 
 > **可灵 Kling AI / Kling 3.0** 优质提示词、**文生图（T2I）** 时尚肖像、视频生成技巧、运动控制工作流与开发者资源的精选集合（快手可灵）。
 
-本仓库专注于**高保真 Kling 提示词**：T2I 肖像、电影感、广告、UGC、动漫、短剧、特效，以及 **API / SDK / 生产工作流**，帮助你把可灵真正用到产品和内容流水线里。
+本仓库专注于**高保真 Kling 提示词**：I2V / Seedance（X 精选）、T2I 肖像、电影感、广告、UGC、动漫、短剧、特效，以及 **API / SDK / 生产工作流**，帮助你把可灵真正用到产品和内容流水线里。
 
 结构与风格参考 [awesome-seedance](https://github.com/ZeroLu/awesome-seedance)。
 
@@ -16,31 +16,137 @@ Last updated on 2026-08-08 12-00-00
 
 ## 📖 目录
 
-> **排序规则：** 各类别内**新增提示词一律插到该节最前面**（最新优先）。浏览时从上到下即最新内容。
+> **排序规则：** 各类别内**新增提示词一律插到该节最前面**（最新优先）。本次从 X 爬取 I2V / Seedance 提示词已置顶。
 
-1. [文生图（T2I）](#1-文生图t2i)
-2. [提示词公式（从这里开始）](#2-提示词公式从这里开始)
-3. [电影风格](#3-电影风格)
-4. [广告与商业品牌](#4-广告与商业品牌)
-5. [社交媒体与病毒模因](#5-社交媒体与病毒模因)
-6. [UGC 风格](#6-ugc-风格)
-7. [动漫与动画风格](#7-动漫与动画风格)
-8. [短剧与网剧](#8-短剧与网剧)
-9. [视觉特效与实验风格](#9-视觉特效与实验风格)
-10. [运动控制与角色一致性](#10-运动控制与角色一致性)
-11. [资源 (API、SDK 与使用指南)](#11-资源)
-12. [贡献指南](#12-贡献指南)
-13. [Star 历史](#13-star-历史)
+1. [图生视频 I2V（X 精选）](#1-图生视频-i2vx-精选)
+2. [Seedance 提示词（X 精选）](#2-seedance-提示词x-精选)
+3. [文生图（T2I）](#3-文生图t2i)
+4. [提示词公式（从这里开始）](#4-提示词公式从这里开始)
+5. [电影风格](#5-电影风格)
+6. [广告与商业品牌](#6-广告与商业品牌)
+7. [社交媒体与病毒模因](#7-社交媒体与病毒模因)
+8. [UGC 风格](#8-ugc-风格)
+9. [动漫与动画风格](#9-动漫与动画风格)
+10. [短剧与网剧](#10-短剧与网剧)
+11. [视觉特效与实验风格](#11-视觉特效与实验风格)
+12. [运动控制与角色一致性](#12-运动控制与角色一致性)
+13. [资源 (API、SDK 与使用指南)](#13-资源)
+14. [贡献指南](#14-贡献指南)
+15. [Star 历史](#15-star-历史)
 
 ---
 
-## 1. 文生图（T2I）
+## 1. 图生视频 I2V（X 精选）
+
+从 X 爬取的 **Kling 图生视频** 提示词（需上传参考静帧）。完整合集：[`prompts/i2v-from-x.md`](./prompts/i2v-from-x.md) · 日志：[`docs/x-crawl-log.md`](./docs/x-crawl-log.md)
+
+> 本节遵循：**新提示词永远放在最前面**。
+
+### 1.1. Kling 2.1 I2V 合集（精选）
+
+*来源：[MayorkingAI (@MayorKingAI)](https://x.com/MayorKingAI) — [Thread](https://x.com/MayorKingAI/status/1927126460352893348)*
+
+```text
+Tracking shot following a warrior woman riding a massive white wolf running at high speed across a frozen tundra, snow flying up from paws, wind whipping her cloak, cold blue tones, dramatic atmosphere, cinematic realism
+```
+
+```text
+Aerial tracking shot of two cars drifting around a neon-lit Tokyo highway curve, tire smoke rising, reflections shimmering on wet asphalt. Electric atmosphere, dynamic, intense
+```
+
+```text
+Slow zoom in on the face of a Korean Man in an elegant tailored suit, looking directly into the camera, centred composition, smoking a cigarette, soft smoke rising, soft ambient light with green and red neon reflections, melancholic expression, cinematic lighting with vintage colour gradation, inspired by Wong Kar-wai's style
+```
+
+### 1.2. Kling 2.0 I2V 合集（精选）
+
+*来源：[MayorkingAI](https://x.com/MayorKingAI/status/1914431899675869327)*
+
+```text
+FPV chase cam shot closely tailing a wingsuit flyer diving between narrow cliffs. Arms stretched, wings rippling, sharp mountain edges blur below, crisp sky, sun flaring through peaks, fast shutter, thrilling, adrenaline
+```
+
+```text
+Slow-motion cinematic tracking shot, a massive whale breaches the ocean surface, glowing from the golden sunset behind. Water cascades off its body, birds scatter mid-air, mountains silhouette in the background. Rippling reflections shimmer. Majestic, awe-inspiring
+```
+
+### 1.3. 仙宫云海 I2V（极简运镜）
+
+```text
+缓慢推进运镜，云雾轻流动，人物缓步，保持空间纵深与高级克制色调，电影质感，4K
+```
+
+### 1.4. I2V 细节强化模板
+
+*来源：[@creatorslop](https://x.com/creatorslop/status/2085350375784378440)*
+
+```text
+Generate a video of [your scene] and include these details: the texture of every major surface, the direction and temperature of the light source, the speed of any movement in the frame, what the background is doing while the subject is in focus, and whether shadows are sharp or soft. Every element should feel chosen, not random.
+```
+
+---
+
+## 2. Seedance 提示词（X 精选）
+
+从 X 爬取的 **Seedance 2.0 / 2.5** 提示词（分镜结构可对照迁移到可灵）。完整包：[`prompts/seedance-from-x.md`](./prompts/seedance-from-x.md)
+
+### 2.1. Roswell 1947 档案片风（Seedance 2.5）
+
+*来源：[@soumyattention](https://x.com/soumyattention/status/2085947512582721619)*
+
+```text
+[Generation Goal] Recovered-archival 1947 Roswell military documentation film (B&W 16mm grain, scratches, degraded mono audio). Stages: (0-8s) ridge handheld + soldiers order camera off; (8-15s) debris inspection + stretcher; (15-27s) tent gurney alien thrashing; (27-30s) film leader fail. Lock uniforms, alien identity, no modern objects.
+```
+
+完整多 Stage 正文见 [`prompts/seedance-from-x.md`](./prompts/seedance-from-x.md)。
+
+### 2.2. 精品咖啡机 UGC 广告 30s（Seedance 2.5）
+
+*来源：[@SadiaMalik182](https://x.com/SadiaMalik182/status/2085947010293883115)*
+
+```text
+Create a 30-second vertical AI UGC product commercial (9:16) for a premium coffee machine.
+Style: Ultra-realistic, cinematic UGC, 4K HDR, natural lighting, smooth handheld.
+Scene 1 (0-5s) creator enters kitchen with mug: "I finally tried this coffee machine."
+Scene 2 (5-10s) beans, water, power button close-ups.
+Scene 3 (10-17s) grind, crema, pour, golden morning light.
+Scene 4 (17-23s) first sip smile: "This honestly tastes amazing."
+Scene 5 (23-27s) product orbit showcase.
+Scene 6 (27-30s) hero product + cup, creator smiles to camera.
+```
+
+### 2.3. 早晨通勤 15 分镜（Seedance 2.5）
+
+*来源：[@AIwithSynthia](https://x.com/AIwithSynthia/status/2085943905577734483)*
+
+```text
+SHOT 1 ECU phone alarm on sheets → SHOT 2 jolt awake → face wash → toothbrush → fridge POV grab → egg/toast pan → rushed bite → outfit change → shoes lace → corridor rush → metro doors → office badge → keyboard OTS → collapse on bed. Match cuts + SFX per shot.
+```
+
+### 2.4. 猫螺旋桨头盔一镜（Seedance 2.0）
+
+*来源：[@saniaspeaks_](https://x.com/saniaspeaks_/status/2085932310923251950)*
+
+```text
+Single continuous shot: woman places spinning propeller fan helmet on silver tabby cat, rides scooter; cat lifts and flies beside scooter with dangling legs and flowing fur; handheld smartphone track; photoreal; no cuts.
+Negative: cartoon, extra limbs, floating without propeller, text, watermark.
+```
+
+### 2.5. Visual Production Graph 工作流
+
+*来源：[@HBCoop_](https://x.com/HBCoop_/status/2050246433480020154)*
+
+用一张「视觉制作图」压缩角色+世界+空间+镜头序列，文本只写 timing / camera / shot order。详见 Seedance 完整包。
+
+---
+
+## 3. 文生图（T2I）
 
 可灵生图 / Kling Image 提示词。完整多语言包见 [`prompts/`](./prompts/)。
 
 > 本节（及全库各分类）遵循：**新提示词永远放在最前面**。
 
-### 1.1. 青空を踏む白 / 踏蓝天的白
+### 3.1. 青空を踏む白 / 踏蓝天的白
 
 *极端低角度盛夏十字路口时尚肖像——纯白装束、鲜烈蓝天、广角腿部前景。画幅 **3:4**。*
 
@@ -73,7 +179,7 @@ Last updated on 2026-08-08 12-00-00
 
 ---
 
-## 2. 提示词公式（从这里开始）
+## 4. 提示词公式（从这里开始）
 
 Kling 3.0 更吃**分镜式导演语言**，而不是关键词堆砌。完整说明见：[`prompts/prompt-formula.md`](./prompts/prompt-formula.md)。
 
@@ -116,11 +222,11 @@ Kling 3.0 更吃**分镜式导演语言**，而不是关键词堆砌。完整说
 
 ---
 
-## 3. 电影风格
+## 5. 电影风格
 
 面向 **Kling 3.0** 多镜头与原生音频优化的专业电影提示词。
 
-### 3.1. 好莱坞夜雨赛车
+### 5.1. 好莱坞夜雨赛车
 
 **提示词：**
 ```text
@@ -134,7 +240,7 @@ Kling 3.0 更吃**分镜式导演语言**，而不是关键词堆砌。完整说
 写实，IMAX 感，人脸稳定，雨水物理真实，4K。
 ```
 
-### 3.2. 维伦纽瓦式沙漠逃离
+### 5.2. 维伦纽瓦式沙漠逃离
 
 **提示词：**
 ```text
@@ -148,7 +254,7 @@ Kling 3.0 更吃**分镜式导演语言**，而不是关键词堆砌。完整说
 写实，灾难级规模，载具几何稳定。
 ```
 
-### 3.3. 王家卫雨夜电话亭
+### 5.3. 王家卫雨夜电话亭
 
 **提示词：**
 ```text
@@ -164,7 +270,7 @@ Kling 3.0 更吃**分镜式导演语言**，而不是关键词堆砌。完整说
 手持，浅景深，情感浓烈，胶片写实。
 ```
 
-### 3.4. 霓虹东京雨夜序列
+### 5.4. 霓虹东京雨夜序列
 
 **提示词：**
 ```text
@@ -176,7 +282,7 @@ Kling 3.0 更吃**分镜式导演语言**，而不是关键词堆砌。完整说
 写实，《银翼杀手 2049》光影，罗杰·迪金斯式布光。
 ```
 
-### 3.5. 日落武士（时间码）
+### 5.5. 日落武士（时间码）
 
 **提示词：**
 ```text
@@ -188,7 +294,7 @@ Kling 3.0 更吃**分镜式导演语言**，而不是关键词堆砌。完整说
 写实，黑泽明摄影语言，8K 质感。
 ```
 
-### 3.6. 爵士钢琴家（原生音频）
+### 5.6. 爵士钢琴家（原生音频）
 
 **提示词：**
 ```text
@@ -200,11 +306,11 @@ Kling 3.0 更吃**分镜式导演语言**，而不是关键词堆砌。完整说
 
 ---
 
-## 4. 广告与商业品牌
+## 6. 广告与商业品牌
 
 用 **Kling AI** 做产品展示、品牌片与高端广告。
 
-### 4.1. 奢侈香水广告（时间码）
+### 6.1. 奢侈香水广告（时间码）
 
 **提示词：**
 ```text
@@ -216,7 +322,7 @@ Kling 3.0 更吃**分镜式导演语言**，而不是关键词堆砌。完整说
 写实时尚广告，产品几何稳定。
 ```
 
-### 4.2. 运动饮料广告
+### 6.2. 运动饮料广告
 
 **提示词：**
 ```text
@@ -229,7 +335,7 @@ Kling 3.0 更吃**分镜式导演语言**，而不是关键词堆砌。完整说
 节奏明快，商业调色，4K，瓶身一致。
 ```
 
-### 4.3. 极简品牌生活方式片
+### 6.3. 极简品牌生活方式片
 
 **提示词：**
 ```text
@@ -240,7 +346,7 @@ Kling 3.0 更吃**分镜式导演语言**，而不是关键词堆砌。完整说
 北欧/日系极简美学，平静旁白留白，柔和环境音。
 ```
 
-### 4.4. 无人机广告复刻（产品替换）
+### 6.4. 无人机广告复刻（产品替换）
 
 **提示词：**
 ```text
@@ -255,11 +361,11 @@ Kling 3.0 更吃**分镜式导演语言**，而不是关键词堆砌。完整说
 
 ---
 
-## 5. 社交媒体与病毒模因
+## 7. 社交媒体与病毒模因
 
 短视频平台的注意力优先与 meme 向提示词。
 
-### 5.1. 巨型橘猫城市 meme
+### 7.1. 巨型橘猫城市 meme
 
 **提示词：**
 ```text
@@ -273,7 +379,7 @@ Kling 3.0 更吃**分镜式导演语言**，而不是关键词堆砌。完整说
 喜剧向，写实物理，巨型尺度光影成立。
 ```
 
-### 5.2. 街头抬杠（强调口型）
+### 7.2. 街头抬杠（强调口型）
 
 **提示词：**
 ```text
@@ -283,7 +389,7 @@ Kling 3.0 更吃**分镜式导演语言**，而不是关键词堆砌。完整说
 口型清晰，自然雨声，meme 构图，写实。
 ```
 
-### 5.3. 一镜到底竖屏钩子
+### 7.3. 一镜到底竖屏钩子
 
 **提示词：**
 ```text
@@ -294,11 +400,11 @@ Kling 3.0 更吃**分镜式导演语言**，而不是关键词堆砌。完整说
 
 ---
 
-## 6. UGC 风格
+## 8. UGC 风格
 
 用户生成内容美学——手机摄影感 + 可控超现实。
 
-### 6.1. 浴室镜子故障 vlog
+### 8.1. 浴室镜子故障 vlog
 
 **提示词：**
 ```text
@@ -312,7 +418,7 @@ Kling 3.0 更吃**分镜式导演语言**，而不是关键词堆砌。完整说
 必须像倒影「网络延迟」，写实，无血腥恐怖。
 ```
 
-### 6.2. 产品开箱 UGC
+### 8.2. 产品开箱 UGC
 
 **提示词：**
 ```text
@@ -322,7 +428,7 @@ Kling 3.0 更吃**分镜式导演语言**，而不是关键词堆砌。完整说
 UGC 真实感，轻微手持晃动，真实肤质，9:16。
 ```
 
-### 6.3. 参考角色念指定音频
+### 8.3. 参考角色念指定音频
 
 **提示词：**
 ```text
@@ -333,11 +439,11 @@ UGC 真实感，轻微手持晃动，真实肤质，9:16。
 
 ---
 
-## 7. 动漫与动画风格
+## 9. 动漫与动画风格
 
 角色动作、风格一致性与动态运动测试。
 
-### 7.1. 武道大会对决
+### 9.1. 武道大会对决
 
 **提示词：**
 ```text
@@ -347,7 +453,7 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 在远景对撞、表情特写与最终一击之间快切。
 ```
 
-### 7.2. 水獭机甲动漫战
+### 9.2. 水獭机甲动漫战
 
 **提示词：**
 ```text
@@ -356,7 +462,7 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 动态镜头，赛璐璐高光，动作有力，机甲设计连贯。
 ```
 
-### 7.3. 梵高活油画
+### 9.3. 梵高活油画
 
 **提示词：**
 ```text
@@ -370,7 +476,7 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 绘画运动，非写实人脸，梦幻氛围。
 ```
 
-### 7.4. 风格板动态图形
+### 9.4. 风格板动态图形
 
 **提示词：**
 ```text
@@ -381,11 +487,11 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 
 ---
 
-## 8. 短剧与网剧
+## 10. 短剧与网剧
 
 竖屏情绪钩子与爽剧结构。
 
-### 8.1. 雨夜情感短剧
+### 10.1. 雨夜情感短剧
 
 **提示词：**
 ```text
@@ -401,7 +507,7 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 电影感雨戏，人脸稳定，口型清晰。
 ```
 
-### 8.2. 竖屏霸总反转
+### 10.2. 竖屏霸总反转
 
 **提示词：**
 ```text
@@ -415,7 +521,7 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 戏剧光影，情绪节拍清楚，写实。
 ```
 
-### 8.3. 10 秒舞台小品
+### 10.3. 10 秒舞台小品
 
 **提示词：**
 ```text
@@ -426,11 +532,11 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 
 ---
 
-## 9. 视觉特效与实验风格
+## 11. 视觉特效与实验风格
 
 奇观、物理与超现实概念。
 
-### 9.1. 天空拉链超现实
+### 11.1. 天空拉链超现实
 
 **提示词：**
 ```text
@@ -444,7 +550,7 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 写实 VFX，尺度过渡成立。
 ```
 
-### 9.2. 轨道空间站碰撞
+### 11.2. 轨道空间站碰撞
 
 **提示词：**
 ```text
@@ -456,7 +562,7 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 写实，轨道碎片逻辑，《地心引力》能量，8K 感。
 ```
 
-### 9.3. 简单图生视频物理
+### 11.3. 简单图生视频物理
 
 **提示词：**
 ```text
@@ -465,7 +571,7 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 保持构图与身份。自然运动模糊。写实。
 ```
 
-### 9.4. 多图流体变形
+### 11.4. 多图流体变形
 
 **提示词：**
 ```text
@@ -475,11 +581,11 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 
 ---
 
-## 10. 运动控制与角色一致性
+## 12. 运动控制与角色一致性
 
 可灵强项：**运动控制（Motion Control）**、**主体/Elements 绑定**、多图参考与身份锁定。
 
-### 10.1. 运动控制重定向
+### 12.1. 运动控制重定向
 
 **提示词：**
 ```text
@@ -489,7 +595,7 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 重定向平滑，无肢体崩坏，电影光影，写实。
 ```
 
-### 10.2. 角色系列一致性
+### 12.2. 角色系列一致性
 
 **提示词：**
 ```text
@@ -501,7 +607,7 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 按参考指定为动漫电影感或写实。
 ```
 
-### 10.3. Elements 时尚 Lookbook
+### 12.3. Elements 时尚 Lookbook
 
 **提示词：**
 ```text
@@ -511,7 +617,7 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 干净影棚，柔和时尚光，竖屏 9:16。
 ```
 
-### 10.4. 多参考拼场景
+### 12.4. 多参考拼场景
 
 **提示词：**
 ```text
@@ -522,7 +628,7 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 
 ---
 
-## 11. 资源
+## 13. 资源
 
 ### 官方
 
@@ -577,7 +683,7 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 
 ---
 
-## 12. 贡献指南
+## 14. 贡献指南
 
 欢迎贡献！如果你有**优秀的 Kling 提示词**（T2V / I2V / T2I）、工作流或工具，请提交 Pull Request。
 
@@ -608,7 +714,7 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 
 ---
 
-## 13. Star 历史
+## 15. Star 历史
 
 <a href="https://star-history.com/#DSeaStar/awesome-kling&Date">
  <picture>

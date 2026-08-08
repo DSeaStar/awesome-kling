@@ -8,7 +8,7 @@ Last updated on 2026-08-08 12-00-00
 
 > A curated collection of the **best Kling AI / Kling 3.0 prompts**, **text-to-image (T2I)** fashion briefs, video generation techniques, Motion Control workflows, and developer resources for **Kuaishou Kling**.
 
-This repository focuses on **high-fidelity Kling prompts** for T2I portraits, cinematic film, advertising, UGC, anime, short drama, and VFX — plus **API guides**, SDKs, and production workflows so you can ship real products on top of Kling.
+This repository focuses on **high-fidelity Kling prompts** for I2V & Seedance (from X), T2I portraits, cinematic film, advertising, UGC, anime, short drama, and VFX — plus **API guides**, SDKs, and production workflows so you can ship real products on top of Kling.
 
 Inspired by [awesome-seedance](https://github.com/ZeroLu/awesome-seedance).
 
@@ -16,31 +16,135 @@ Inspired by [awesome-seedance](https://github.com/ZeroLu/awesome-seedance).
 
 ## 📖 Table of Contents
 
-> **Ordering rule:** Within each category, **new prompts are always inserted at the top** (newest first).
+> **Ordering rule:** New prompts always go first within each section. Latest X crawl (I2V / Seedance) is pinned to the top.
 
-1. [Text-to-Image (T2I)](#1-text-to-image-t2i)
-2. [Prompt Formula (Start Here)](#2-prompt-formula-start-here)
-3. [Cinematic Film Styles](#3-cinematic-film-styles)
-4. [Advertising & Commercial Branding](#4-advertising--commercial-branding)
-5. [Social Media & Viral Memes](#5-social-media--viral-memes)
-6. [UGC Style](#6-ugc-style)
-7. [Anime & Animation Styles](#7-anime--animation-styles)
-8. [Short-form Drama & Web Series](#8-short-form-drama--web-series)
-9. [Visual Effects & Experimental Styles](#9-visual-effects--experimental-styles)
-10. [Motion Control & Character Consistency](#10-motion-control--character-consistency)
-11. [Resources (API, SDK & How-to-use)](#11-resources)
-12. [Contributing](#12-contributing)
-13. [Star History](#13-star-history)
+1. [Image-to-Video I2V (from X)](#1-image-to-video-i2v-from-x)
+2. [Seedance Prompts (from X)](#2-seedance-prompts-from-x)
+3. [Text-to-Image (T2I)](#3-text-to-image-t2i)
+4. [Prompt Formula (Start Here)](#4-prompt-formula-start-here)
+5. [Cinematic Film Styles](#5-cinematic-film-styles)
+6. [Advertising & Commercial Branding](#6-advertising--commercial-branding)
+7. [Social Media & Viral Memes](#7-social-media--viral-memes)
+8. [UGC Style](#8-ugc-style)
+9. [Anime & Animation Styles](#9-anime--animation-styles)
+10. [Short-form Drama & Web Series](#10-short-form-drama--web-series)
+11. [Visual Effects & Experimental Styles](#11-visual-effects--experimental-styles)
+12. [Motion Control & Character Consistency](#12-motion-control--character-consistency)
+13. [Resources (API, SDK & How-to-use)](#13-resources)
+14. [Contributing](#14-contributing)
+15. [Star History](#15-star-history)
 
 ---
 
-## 1. Text-to-Image (T2I)
+## 1. Image-to-Video I2V (from X)
+
+Kling **image-to-video** prompts crawled from public X posts. Full pack: [`prompts/i2v-from-x.md`](./prompts/i2v-from-x.md) · Log: [`docs/x-crawl-log.md`](./docs/x-crawl-log.md)
+
+> **Newest first** in this section and repo-wide.
+
+### 1.1. Kling 2.1 I2V Collection (highlights)
+
+*Source: [MayorkingAI (@MayorKingAI)](https://x.com/MayorKingAI) — [Thread](https://x.com/MayorKingAI/status/1927126460352893348)*
+
+```text
+Tracking shot following a warrior woman riding a massive white wolf running at high speed across a frozen tundra, snow flying up from paws, wind whipping her cloak, cold blue tones, dramatic atmosphere, cinematic realism
+```
+
+```text
+Aerial tracking shot of two cars drifting around a neon-lit Tokyo highway curve, tire smoke rising, reflections shimmering on wet asphalt. Electric atmosphere, dynamic, intense
+```
+
+```text
+Slow zoom in on the face of a Korean Man in an elegant tailored suit, looking directly into the camera, centred composition, smoking a cigarette, soft smoke rising, soft ambient light with green and red neon reflections, melancholic expression, cinematic lighting with vintage colour gradation, inspired by Wong Kar-wai's style
+```
+
+### 1.2. Kling 2.0 I2V Collection (highlights)
+
+*Source: [MayorkingAI](https://x.com/MayorKingAI/status/1914431899675869327)*
+
+```text
+FPV chase cam shot closely tailing a wingsuit flyer diving between narrow cliffs. Arms stretched, wings rippling, sharp mountain edges blur below, crisp sky, sun flaring through peaks, fast shutter, thrilling, adrenaline
+```
+
+```text
+Slow-motion cinematic tracking shot, a massive whale breaches the ocean surface, glowing from the golden sunset behind. Water cascades off its body, birds scatter mid-air, mountains silhouette in the background. Rippling reflections shimmer. Majestic, awe-inspiring
+```
+
+### 1.3. Cloud palace I2V (minimal camera)
+
+```text
+Slow push-in, light cloud drift, figure walks slowly, preserve depth and restrained palette, cinematic, 4K
+```
+
+### 1.4. Detail-forcing I2V template
+
+*Source: [@creatorslop](https://x.com/creatorslop/status/2085350375784378440)*
+
+```text
+Generate a video of [your scene] and include these details: the texture of every major surface, the direction and temperature of the light source, the speed of any movement in the frame, what the background is doing while the subject is in focus, and whether shadows are sharp or soft. Every element should feel chosen, not random.
+```
+
+---
+
+## 2. Seedance Prompts (from X)
+
+**Seedance 2.0 / 2.5** prompts crawled from X (shot structure ports well to Kling). Full pack: [`prompts/seedance-from-x.md`](./prompts/seedance-from-x.md)
+
+### 2.1. Roswell 1947 archival film (Seedance 2.5)
+
+*Source: [@soumyattention](https://x.com/soumyattention/status/2085947512582721619)*
+
+```text
+[Generation Goal] Recovered-archival 1947 Roswell military documentation film (B&W 16mm grain, scratches, degraded mono audio). Stages: (0-8s) ridge handheld + soldiers order camera off; (8-15s) debris inspection + stretcher; (15-27s) tent gurney alien thrashing; (27-30s) film leader fail. Lock uniforms, alien identity, no modern objects.
+```
+
+### 2.2. Premium coffee machine UGC 30s (Seedance 2.5)
+
+*Source: [@SadiaMalik182](https://x.com/SadiaMalik182/status/2085947010293883115)*
+
+```text
+Create a 30-second vertical AI UGC product commercial (9:16) for a premium coffee machine.
+Style: Ultra-realistic, cinematic UGC, 4K HDR, natural lighting, smooth handheld.
+Scene 1 (0-5s) creator enters kitchen with mug: "I finally tried this coffee machine."
+Scene 2 (5-10s) beans, water, power button close-ups.
+Scene 3 (10-17s) grind, crema, pour, golden morning light.
+Scene 4 (17-23s) first sip smile: "This honestly tastes amazing."
+Scene 5 (23-27s) product orbit showcase.
+Scene 6 (27-30s) hero product + cup, creator smiles to camera.
+```
+
+### 2.3. Morning commute 15-shot table (Seedance 2.5)
+
+*Source: [@AIwithSynthia](https://x.com/AIwithSynthia/status/2085943905577734483)*
+
+```text
+SHOT 1 ECU phone alarm on sheets → SHOT 2 jolt awake → face wash → toothbrush → fridge POV grab → egg/toast pan → rushed bite → outfit change → shoes lace → corridor rush → metro doors → office badge → keyboard OTS → collapse on bed. Match cuts + SFX per shot.
+```
+
+### 2.4. Cat propeller helmet one-take (Seedance 2.0)
+
+*Source: [@saniaspeaks_](https://x.com/saniaspeaks_/status/2085932310923251950)*
+
+```text
+Single continuous shot: woman places spinning propeller fan helmet on silver tabby cat, rides scooter; cat lifts and flies beside scooter with dangling legs and flowing fur; handheld smartphone track; photoreal; no cuts.
+Negative: cartoon, extra limbs, floating without propeller, text, watermark.
+```
+
+### 2.5. Visual Production Graph workflow
+
+*Source: [@HBCoop_](https://x.com/HBCoop_/status/2050246433480020154)*
+
+Compress character + world + layout + shot sequence into one control image; text only handles timing / camera / shot order. See full Seedance pack.
+
+---
+
+## 3. Text-to-Image (T2I)
 
 Kling Image / 可灵生图 prompts. Full multi-language packs live under [`prompts/`](./prompts/).
 
 > In this section (and every category in this repo): **new prompts always go first**.
 
-### 1.1. 青空を踏む白 / White Stepping on Blue Sky
+### 3.1. 青空を踏む白 / White Stepping on Blue Sky
 
 *Extreme low-angle summer crosswalk fashion portrait — pure white outfit, vivid blue sky, wide-angle leg foreground. Aspect **3:4**.*
 
@@ -61,7 +165,7 @@ mirrored / left-right flip, left hand detached from raised left knee, deformed t
 
 ---
 
-## 2. Prompt Formula (Start Here)
+## 4. Prompt Formula (Start Here)
 
 Kling 3.0 responds best to **cinematic direction**, not keyword soup. Full breakdown: [`prompts/prompt-formula.md`](./prompts/prompt-formula.md).
 
@@ -104,11 +208,11 @@ Commercial playbooks (CN): [`prompts/commercial-use-cases.md`](./prompts/commerc
 
 ---
 
-## 3. Cinematic Film Styles
+## 5. Cinematic Film Styles
 
 Professional cinematic approaches optimized for **Kling 3.0** multi-shot and native audio.
 
-### 3.1. Hollywood Night Rain Racing
+### 5.1. Hollywood Night Rain Racing
 
 *Le Mans energy — dual-driver tension, wet asphalt, green-light launch.*
 
@@ -124,7 +228,7 @@ Duration: 12s. Multi-shot.
 Photorealistic, IMAX feel, coherent faces, natural rain physics, 4K.
 ```
 
-### 3.2. Denis Villeneuve Desert Escape
+### 5.2. Denis Villeneuve Desert Escape
 
 *Epic scale, desaturated palette, nature vs. machine.*
 
@@ -140,7 +244,7 @@ Duration: 12s.
 Photorealistic, catastrophic scale, stable vehicle geometry.
 ```
 
-### 3.3. Wong Kar-wai Rainy Phone Booth
+### 5.3. Wong Kar-wai Rainy Phone Booth
 
 *Nostalgic Hong Kong art-cinema mood with emotional restraint.*
 
@@ -158,7 +262,7 @@ Duration: 10s.
 Handheld, shallow DOF, emotionally intense, photorealistic film look.
 ```
 
-### 3.4. Neon Tokyo Rain Sequence
+### 5.4. Neon Tokyo Rain Sequence
 
 *Blade Runner 2049 lighting language with timed shot escalation.*
 
@@ -172,7 +276,7 @@ Handheld, shallow DOF, emotionally intense, photorealistic film look.
 Hyper-realistic, 8K feel, Blade Runner 2049 cinematography, Roger Deakins lighting.
 ```
 
-### 3.5. Samurai at Sunset (Time-coded)
+### 5.5. Samurai at Sunset (Time-coded)
 
 *Hitchcock vertigo + Kurosawa scale in one 15s beat.*
 
@@ -186,7 +290,7 @@ Hyper-realistic, 8K feel, Blade Runner 2049 cinematography, Roger Deakins lighti
 Hyper-realistic, 8K, Akira Kurosawa cinematography.
 ```
 
-### 3.6. Jazz Pianist with Native Audio
+### 5.6. Jazz Pianist with Native Audio
 
 *Performance scene — use Kling native audio / dialogue-friendly phrasing.*
 
@@ -200,11 +304,11 @@ Audio: crisp piano attack, walking bassline, brushed snare, breathy sax melody, 
 
 ---
 
-## 4. Advertising & Commercial Branding
+## 6. Advertising & Commercial Branding
 
 Use **Kling AI** for product showcases, brand films, and high-end commercials.
 
-### 4.1. Luxury Perfume Commercial (Time-coded)
+### 6.1. Luxury Perfume Commercial (Time-coded)
 
 **Prompt:**
 ```text
@@ -216,7 +320,7 @@ Use **Kling AI** for product showcases, brand films, and high-end commercials.
 Hyper-realistic fashion commercial, 8K feel, product-stable geometry.
 ```
 
-### 4.2. Sports Drink Ad
+### 6.2. Sports Drink Ad
 
 **Prompt:**
 ```text
@@ -229,7 +333,7 @@ Generate a premium 12-second sports drink commercial for the product in the refe
 Brisk pacing, high-end commercial grade, 4K, consistent bottle design.
 ```
 
-### 4.3. Minimal Brand Lifestyle Film
+### 6.3. Minimal Brand Lifestyle Film
 
 **Prompt:**
 ```text
@@ -240,7 +344,7 @@ Camera: slow push-ins and empty-frame transitions.
 Nordic / Japanese minimal aesthetic, calm voiceover space, soft ambient room tone.
 ```
 
-### 4.4. Drone Product Replacement Ad
+### 6.4. Drone Product Replacement Ad
 
 **Prompt:**
 ```text
@@ -255,11 +359,11 @@ More commercial recipes: [`prompts/commercial-use-cases.md`](./prompts/commercia
 
 ---
 
-## 5. Social Media & Viral Memes
+## 7. Social Media & Viral Memes
 
 Attention-first vertical and meme-ready setups for short platforms.
 
-### 5.1. Giant Orange Cat City Meme
+### 7.1. Giant Orange Cat City Meme
 
 **Prompt:**
 ```text
@@ -273,7 +377,7 @@ Duration: 15s. Vertical 9:16 preferred.
 Comedic, photoreal physics, stable giant-scale lighting.
 ```
 
-### 5.2. Street Argument with On-screen Emphasis
+### 7.2. Street Argument with On-screen Emphasis
 
 **Prompt:**
 ```text
@@ -283,7 +387,7 @@ The other in denim jacket replies: "Who cares. A pretzel's a pretzel!"
 Clear lip-sync, natural rain ambience, meme-ready framing, photorealistic.
 ```
 
-### 5.3. One-Take Hook Vertical
+### 7.3. One-Take Hook Vertical
 
 **Prompt:**
 ```text
@@ -294,11 +398,11 @@ Handheld phone aesthetic, natural noise, no music until the last beat drop.
 
 ---
 
-## 6. UGC Style
+## 8. UGC Style
 
 User-generated aesthetics — phone camera energy with controlled surreal twists.
 
-### 6.1. Bathroom Mirror Glitch Vlog
+### 8.1. Bathroom Mirror Glitch Vlog
 
 **Prompt:**
 ```text
@@ -312,7 +416,7 @@ Duration: 15s.
 Must feel like a "network delay" of the reflection, photoreal, no horror gore.
 ```
 
-### 6.2. Product Unboxing UGC
+### 8.2. Product Unboxing UGC
 
 **Prompt:**
 ```text
@@ -322,7 +426,7 @@ Casual English dialogue: "Okay wait — this packaging is actually insane."
 UGC realism, mild handheld shake, authentic skin texture, 9:16.
 ```
 
-### 6.3. Reference Character Speaks Audio
+### 8.3. Reference Character Speaks Audio
 
 **Prompt:**
 ```text
@@ -333,11 +437,11 @@ Natural room light, stable identity, subtle head motion, photorealistic.
 
 ---
 
-## 7. Anime & Animation Styles
+## 9. Anime & Animation Styles
 
 Character action, style consistency, and dynamic motion tests.
 
-### 7.1. Martial Arts Tournament Clash
+### 9.1. Martial Arts Tournament Clash
 
 **Prompt:**
 ```text
@@ -347,7 +451,7 @@ Keep both character designs consistent with input images.
 Fast cuts between wide clash, close-up grit, and final blow freeze.
 ```
 
-### 7.2. Otter Mecha Anime Battle
+### 9.2. Otter Mecha Anime Battle
 
 **Prompt:**
 ```text
@@ -356,7 +460,7 @@ The otter gives a grim thumbs up, then pilots the mech into battle against a mar
 Dynamic camera, cel-shaded highlights, kinetic action, coherent mecha design.
 ```
 
-### 7.3. Van Gogh Living Painting
+### 9.3. Van Gogh Living Painting
 
 **Prompt:**
 ```text
@@ -370,7 +474,7 @@ Entire world slowly flows and breathes along brushstroke directions.
 Painterly motion, no photoreal faces, dreamy atmosphere.
 ```
 
-### 7.4. Motion Graphics from Style Boards
+### 9.4. Motion Graphics from Style Boards
 
 **Prompt:**
 ```text
@@ -381,11 +485,11 @@ Bold shapes, clean timing, snappy transitions.
 
 ---
 
-## 8. Short-form Drama & Web Series
+## 10. Short-form Drama & Web Series
 
 Mini-drama hooks optimized for vertical feeds and emotional beats.
 
-### 8.1. Rainy Night Emotional Mini-Drama
+### 10.1. Rainy Night Emotional Mini-Drama
 
 **Prompt:**
 ```text
@@ -401,7 +505,7 @@ Characters: wealthy male lead (black coat, wet hair, red-rimmed eyes) vs stubbor
 Cinematic rain, stable faces, clear lip-sync.
 ```
 
-### 8.2. Viral CEO Reversal (Vertical)
+### 10.2. Viral CEO Reversal (Vertical)
 
 **Prompt:**
 ```text
@@ -415,7 +519,7 @@ Duration: 15s.
 Dramatic lighting, clear emotional beats, photoreal.
 ```
 
-### 8.3. 10s Stage Sketch Comedy
+### 10.3. 10s Stage Sketch Comedy
 
 **Prompt:**
 ```text
@@ -426,11 +530,11 @@ Audience laugh lighting pulse, confetti ending, 16:9 stage camera language.
 
 ---
 
-## 9. Visual Effects & Experimental Styles
+## 11. Visual Effects & Experimental Styles
 
 Spectacle, physics, and surreal concepts.
 
-### 9.1. Sky Zipper Surrealism
+### 11.1. Sky Zipper Surrealism
 
 **Prompt:**
 ```text
@@ -444,7 +548,7 @@ Duration: 15s.
 Photoreal VFX, coherent scale transitions.
 ```
 
-### 9.2. Orbital Station Collision
+### 11.2. Orbital Station Collision
 
 **Prompt:**
 ```text
@@ -456,7 +560,7 @@ Earth looms serene in background.
 Hyper-realistic, orbital debris logic, Gravity-film energy, 8K feel.
 ```
 
-### 9.3. Simple I2V Physics
+### 11.3. Simple I2V Physics
 
 **Prompt:**
 ```text
@@ -465,7 +569,7 @@ Subtle environmental motion first (wind, cloth, particles), then primary subject
 Preserve composition and identity. Natural motion blur. Photorealistic.
 ```
 
-### 9.4. Fluid Morph Between Photos
+### 11.4. Fluid Morph Between Photos
 
 **Prompt:**
 ```text
@@ -475,11 +579,11 @@ Seamless identity transitions, continuous camera energy, no hard cuts, dreamlike
 
 ---
 
-## 10. Motion Control & Character Consistency
+## 12. Motion Control & Character Consistency
 
 Kling-native strengths: **Motion Control**, **Elements / subject binding**, multi-image reference, and identity lock.
 
-### 10.1. Motion Control Retarget
+### 12.1. Motion Control Retarget
 
 **Prompt:**
 ```text
@@ -489,7 +593,7 @@ Preserve identity, face, and clothing from the image; ignore the motion video's 
 Smooth retargeting, no limb distortion, cinematic lighting, photorealistic.
 ```
 
-### 10.2. Character Series Consistency
+### 12.2. Character Series Consistency
 
 **Prompt:**
 ```text
@@ -501,7 +605,7 @@ Same wardrobe, same face, coherent age and hairstyle.
 Anime-cinematic or photoreal as specified by references.
 ```
 
-### 10.3. Fashion Lookbook with Elements
+### 12.3. Fashion Lookbook with Elements
 
 **Prompt:**
 ```text
@@ -511,7 +615,7 @@ Each look: walk cycle medium shot + full-body hero pose + fabric detail close-up
 Clean studio, soft fashion lighting, vertical 9:16.
 ```
 
-### 10.4. Multi-Reference Scene Build
+### 12.4. Multi-Reference Scene Build
 
 **Prompt:**
 ```text
@@ -522,7 +626,7 @@ Stable multi-subject consistency, photoreal, gentle steadicam follow.
 
 ---
 
-## 11. Resources
+## 13. Resources
 
 ### Official
 
@@ -577,7 +681,7 @@ Stable multi-subject consistency, photoreal, gentle steadicam follow.
 
 ---
 
-## 12. Contributing
+## 14. Contributing
 
 Contributions are welcome! If you have an **awesome Kling AI prompt** (T2V / I2V / T2I), workflow, or tool, please open a Pull Request.
 
@@ -608,7 +712,7 @@ Please do **not** submit copyrighted media you do not have rights to redistribut
 
 ---
 
-## 13. Star History
+## 15. Star History
 
 <a href="https://star-history.com/#DSeaStar/awesome-kling&Date">
  <picture>
