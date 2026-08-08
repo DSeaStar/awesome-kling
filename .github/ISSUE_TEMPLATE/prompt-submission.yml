@@ -1,0 +1,44 @@
+name: 投稿提示词 · Prompt submission
+description: 提交 Kling / I2V / Seedance / T2I 提示词
+title: "[prompt] "
+labels: ["prompt", "contribution"]
+body:
+  - type: dropdown
+    id: mode
+    attributes:
+      label: 模式 · Mode
+      options:
+        - Kling 3.0 / Omni
+        - Image-to-Video (I2V)
+        - Text-to-Video
+        - Text-to-Image (T2I)
+        - Seedance (cross-ref)
+        - Motion Control
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: 标题
+      placeholder: 例如：夜雨赛车多镜头
+    validations:
+      required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: 完整提示词
+      description: 请贴全文；可附负面提示
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source URL
+      description: 原帖或 Original
+      placeholder: https://x.com/...
+  - type: textarea
+    id: notes
+    attributes:
+      label: 备注
+      description: 画幅、模型版本、是否需要预览图等

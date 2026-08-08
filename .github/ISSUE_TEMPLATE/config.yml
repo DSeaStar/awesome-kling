@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 周更候选目录
+    url: https://github.com/DSeaStar/awesome-kling/tree/main/docs/x-crawl-candidates
+    about: 查看自动爬取的候选提示词
+  - name: 贡献指南
+    url: https://github.com/DSeaStar/awesome-kling/blob/main/CONTRIBUTING.md
+    about: 最新优先规则与投稿标准

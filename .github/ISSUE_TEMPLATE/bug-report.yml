@@ -1,0 +1,20 @@
+name: 失效链接 / 错误 · Bug
+description: 坏链、错误分类、渲染问题
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: 问题描述
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: 文件或 URL
+      placeholder: README.md / prompts/...
+  - type: textarea
+    id: fix
+    attributes:
+      label: 建议修复（可选）

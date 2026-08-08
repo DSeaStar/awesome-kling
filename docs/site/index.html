@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Awesome Kling AI</title>
+  <meta name="description" content="可灵 Kling AI / Kling 3.0 提示词精选：I2V、T2I、Omni、Seedance 对照与周更爬取。" />
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #121a22;
+      --text: #e7eef7;
+      --muted: #93a4b8;
+      --accent: #5b9dff;
+      --line: #1e2a38;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, #1a2b44 0%, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    main { max-width: 920px; margin: 0 auto; padding: 48px 20px 80px; }
+    h1 { font-size: 2rem; margin: 0 0 8px; letter-spacing: -0.02em; }
+    .lead { color: var(--muted); margin-bottom: 28px; }
+    .badges a { margin-right: 8px; color: var(--accent); }
+    .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .card {
+      background: color-mix(in srgb, var(--card) 90%, #000);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px 16px 14px;
+    }
+    .card h2 { font-size: 1.05rem; margin: 0 0 8px; }
+    .card p { margin: 0 0 12px; color: var(--muted); font-size: 0.95rem; }
+    .card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+    .card a:hover { text-decoration: underline; }
+    footer { margin-top: 36px; color: var(--muted); font-size: 0.9rem; }
+    code { background: #0a121b; padding: 1px 6px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Awesome Kling AI 🎬</h1>
+    <p class="lead">
+      可灵 Kling / Kling 3.0 提示词、I2V、T2I、Omni、Seedance 对照与每周 X 爬取。
+      主文档在 GitHub；本页为快速导航。
+    </p>
+    <p class="badges">
+      <a href="https://github.com/DSeaStar/awesome-kling">GitHub 仓库</a>
+      <a href="https://github.com/DSeaStar/awesome-kling/blob/main/README.md">中文 README</a>
+      <a href="https://github.com/DSeaStar/awesome-kling/blob/main/README-en.md">English</a>
+      <a href="https://github.com/DSeaStar/awesome-kling/blob/main/CONTRIBUTING.md">贡献指南</a>
+    </p>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Kling 3.0 / Omni</h2>
+        <p>多镜头、原生音频、Elements、Motion Control。</p>
+        <a href="https://github.com/DSeaStar/awesome-kling/blob/main/prompts/kling-3-omni.md">prompts/kling-3-omni.md →</a>
+      </section>
+      <section class="card">
+        <h2>图生视频 I2V</h2>
+        <p>X 精选运镜提示词（含 2.0 / 2.1 合集）。</p>
+        <a href="https://github.com/DSeaStar/awesome-kling/blob/main/prompts/i2v-from-x.md">prompts/i2v-from-x.md →</a>
+      </section>
+      <section class="card">
+        <h2>Seedance 对照</h2>
+        <p>商用分镜与长叙事，可迁移到可灵。</p>
+        <a href="https://github.com/DSeaStar/awesome-kling/blob/main/prompts/seedance-from-x.md">prompts/seedance-from-x.md →</a>
+      </section>
+      <section class="card">
+        <h2>T2I 时尚肖像</h2>
+        <p>青空を踏む白 / 踏蓝天的白 等。</p>
+        <a href="https://github.com/DSeaStar/awesome-kling/blob/main/prompts/t2i-fashion-portraits.md">prompts/t2i-fashion-portraits.md →</a>
+      </section>
+      <section class="card">
+        <h2>负向词 / 工作流</h2>
+        <p>解剖、产品、I2V 物理；落地 Cookbook。</p>
+        <a href="https://github.com/DSeaStar/awesome-kling/blob/main/prompts/negative-prompts.md">negative-prompts.md →</a><br />
+        <a href="https://github.com/DSeaStar/awesome-kling/blob/main/prompts/workflows.md">workflows.md →</a>
+      </section>
+      <section class="card">
+        <h2>模型对照</h2>
+        <p>Kling · Seedance · Veo 选型简表。</p>
+        <a href="https://github.com/DSeaStar/awesome-kling/blob/main/docs/model-comparison.md">model-comparison.md →</a>
+      </section>
+      <section class="card">
+        <h2>每周爬取</h2>
+        <p>周一自动候选 · 审核后最新优先入库。</p>
+        <a href="https://github.com/DSeaStar/awesome-kling/blob/main/docs/x-crawl-log.md">x-crawl-log.md →</a><br />
+        <a href="https://github.com/DSeaStar/awesome-kling/tree/main/docs/x-crawl-candidates">candidates/ →</a>
+      </section>
+      <section class="card">
+        <h2>Sibling</h2>
+        <p>结构灵感来自 Seedance awesome 列表。</p>
+        <a href="https://github.com/ZeroLu/awesome-seedance">awesome-seedance →</a>
+      </section>
+    </div>
+
+    <footer>
+      MIT · <code>DSeaStar/awesome-kling</code> · 排序规则：新增永远放最前面。
+    </footer>
+  </main>
+</body>
+</html>

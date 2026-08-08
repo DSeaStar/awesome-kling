@@ -37,6 +37,7 @@
 
 | 日期 | 主题 | 工具/查询 | 入库文件 | 条数 |
 |------|------|-----------|----------|------|
+| 2026-08-08 | Kling 3.0 / Omni | X keyword Latest + 结构模板 | `prompts/kling-3-omni.md` | vlog 对白、美食 B-roll、Omni 模板等 |
 | 2026-08-08 | weekly auto | checklist-only (no token) | `docs/x-crawl-candidates/2026-08-08.md` | I2V=0, Seedance=0 |
 | 2026-08-08 | Kling I2V | X keyword/semantic + thread fetch | `prompts/i2v-from-x.md` | 2 合集×10 + 3 模板 |
 | 2026-08-08 | Seedance 2.0/2.5 | X keyword Latest | `prompts/seedance-from-x.md` | 8 条完整/结构提示词 |
