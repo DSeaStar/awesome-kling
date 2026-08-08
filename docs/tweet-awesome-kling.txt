@@ -1,0 +1,10 @@
+🎬 开源了 awesome-kling —— 可灵 Kling AI / 3.0 Omni 提示词精选
+
+✅ Kling 3.0 分镜 / 原生音频 / Motion Control
+✅ 图生视频 I2V 合集
+✅ Seedance 对照 + T2I 时尚肖像
+✅ 负向词 · 工作流 · 每周 X 候选爬取
+
+👉 https://github.com/DSeaStar/awesome-kling
+
+#KlingAI #可灵 #AIvideo

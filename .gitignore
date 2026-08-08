@@ -5,3 +5,9 @@ Thumbs.db
 .vscode/
 *.mp4
 !videos/.gitkeep
+
+# X / Twitter secrets
+scripts/x-mcp.env
+.env
+*.pem
+
