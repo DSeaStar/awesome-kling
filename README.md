@@ -38,7 +38,7 @@ Last updated on 2026-08-08 12-00-00
 
 ## 1. 图生视频 I2V（X 精选）
 
-从 X 爬取的 **Kling 图生视频** 提示词（需上传参考静帧）。完整合集：[`prompts/i2v-from-x.md`](./prompts/i2v-from-x.md) · 日志：[`docs/x-crawl-log.md`](./docs/x-crawl-log.md)
+从 X 爬取的 **Kling 图生视频** 提示词（需上传参考静帧）。完整合集：[`prompts/i2v-from-x.md`](./prompts/i2v-from-x.md) · 日志：[`docs/x-crawl-log.md`](./docs/x-crawl-log.md) · **每周一自动爬取候选**
 
 > 本节遵循：**新提示词永远放在最前面**。
 
@@ -646,6 +646,11 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 - 本仓库：[`prompts/prompt-formula.md`](./prompts/prompt-formula.md)
 - 本仓库：[`prompts/commercial-use-cases.md`](./prompts/commercial-use-cases.md)
 - 本仓库：[`prompts/t2i-fashion-portraits.md`](./prompts/t2i-fashion-portraits.md) — T2I 时尚肖像
+- 本仓库：[`prompts/i2v-from-x.md`](./prompts/i2v-from-x.md) — X 爬取 I2V
+- 本仓库：[`prompts/seedance-from-x.md`](./prompts/seedance-from-x.md) — X 爬取 Seedance
+- 本仓库：[`docs/x-crawl-log.md`](./docs/x-crawl-log.md) — 爬取日志（**每周一自动**）
+- 本仓库：[`scripts/weekly_x_crawl.py`](./scripts/weekly_x_crawl.py) — 周更爬取脚本
+- 候选目录：[`docs/x-crawl-candidates/`](./docs/x-crawl-candidates/) — 自动 PR，审核后晋升
 
 ### API、SDK 与工具
 

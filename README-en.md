@@ -38,7 +38,7 @@ Inspired by [awesome-seedance](https://github.com/ZeroLu/awesome-seedance).
 
 ## 1. Image-to-Video I2V (from X)
 
-Kling **image-to-video** prompts crawled from public X posts. Full pack: [`prompts/i2v-from-x.md`](./prompts/i2v-from-x.md) · Log: [`docs/x-crawl-log.md`](./docs/x-crawl-log.md)
+Kling **image-to-video** prompts crawled from public X posts. Full pack: [`prompts/i2v-from-x.md`](./prompts/i2v-from-x.md) · Log: [`docs/x-crawl-log.md`](./docs/x-crawl-log.md) · **Weekly auto candidates (Mondays)**
 
 > **Newest first** in this section and repo-wide.
 
@@ -644,6 +644,11 @@ Stable multi-subject consistency, photoreal, gentle steadicam follow.
 - In-repo: [`prompts/prompt-formula.md`](./prompts/prompt-formula.md)
 - In-repo: [`prompts/commercial-use-cases.md`](./prompts/commercial-use-cases.md)
 - In-repo: [`prompts/t2i-fashion-portraits.md`](./prompts/t2i-fashion-portraits.md) — T2I fashion portraits
+- In-repo: [`prompts/i2v-from-x.md`](./prompts/i2v-from-x.md) — I2V from X
+- In-repo: [`prompts/seedance-from-x.md`](./prompts/seedance-from-x.md) — Seedance from X
+- In-repo: [`docs/x-crawl-log.md`](./docs/x-crawl-log.md) — crawl log (**weekly Monday**)
+- In-repo: [`scripts/weekly_x_crawl.py`](./scripts/weekly_x_crawl.py) — weekly crawl script
+- Candidates: [`docs/x-crawl-candidates/`](./docs/x-crawl-candidates/) — auto PR, promote after review
 
 ### APIs, SDKs & tooling
 
