@@ -1,8 +1,27 @@
 # Kling 3.0 Prompt Formula
 
-> Distilled from official Kling guides and community best practices. Use this structure for text-to-video, image-to-video, multi-shot, and native-audio workflows.
+> Distilled from official Kling guides and community best practices. Use this structure for text-to-video, image-to-video, multi-shot, native-audio, and **text-to-image (T2I)** workflows.
 
-## Five-Layer Structure
+For full T2I fashion briefs (JP / CN / EN), see [`t2i-fashion-portraits.md`](./t2i-fashion-portraits.md).
+
+## T2I fashion brief structure
+
+For stills (Kling Image / 可灵生图), a sectioned brief often beats a single paragraph:
+
+```
+1. Theme      — short title / mood keyword
+2. Subject    — who, where, overall shot intent
+3. Face       — gaze, features, makeup, hair
+4. Wardrobe   — garments + exact pose / limbs
+5. Background — place, props, light direction
+6. Camera     — aspect, angle, lens, DOF split
+7. Texture    — photoreal tags, color grade
+8. Negative   — flips, contact breaks, deformations
+```
+
+---
+
+## Five-Layer Structure (video)
 
 Write prompts in this order:
 

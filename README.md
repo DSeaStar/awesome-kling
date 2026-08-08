@@ -6,9 +6,9 @@ Last updated on 2026-08-08 12-00-00
 
 | [English](./README.md) | [简体中文](./README-zh.md) |
 
-> A curated collection of the **best Kling AI / Kling 3.0 prompts**, video generation techniques, Motion Control workflows, and developer resources for **Kuaishou Kling**.
+> A curated collection of the **best Kling AI / Kling 3.0 prompts**, **text-to-image (T2I)** fashion briefs, video generation techniques, Motion Control workflows, and developer resources for **Kuaishou Kling**.
 
-This repository focuses on **high-fidelity Kling prompts** for cinematic film, advertising, UGC, anime, short drama, and VFX — plus **API guides**, SDKs, and production workflows so you can ship real products on top of Kling.
+This repository focuses on **high-fidelity Kling prompts** for T2I portraits, cinematic film, advertising, UGC, anime, short drama, and VFX — plus **API guides**, SDKs, and production workflows so you can ship real products on top of Kling.
 
 Inspired by [awesome-seedance](https://github.com/ZeroLu/awesome-seedance).
 
@@ -25,9 +25,10 @@ Inspired by [awesome-seedance](https://github.com/ZeroLu/awesome-seedance).
 7. [Short-form Drama & Web Series](#7-short-form-drama--web-series)
 8. [Visual Effects & Experimental Styles](#8-visual-effects--experimental-styles)
 9. [Motion Control & Character Consistency](#9-motion-control--character-consistency)
-10. [Resources (API, SDK & How-to-use)](#10-resources)
-11. [Contributing](#11-contributing)
-12. [Star History](#12-star-history)
+10. [Text-to-Image (T2I)](#10-text-to-image-t2i)
+11. [Resources (API, SDK & How-to-use)](#11-resources)
+12. [Contributing](#12-contributing)
+13. [Star History](#13-star-history)
 
 ---
 
@@ -492,7 +493,32 @@ Stable multi-subject consistency, photoreal, gentle steadicam follow.
 
 ---
 
-## 10. Resources
+## 10. Text-to-Image (T2I)
+
+Kling Image / 可灵生图 prompts. Full multi-language packs live under [`prompts/`](./prompts/).
+
+### 10.1. 青空を踏む白 / White Stepping on Blue Sky
+
+*Extreme low-angle summer crosswalk fashion portrait — pure white outfit, vivid blue sky, wide-angle leg foreground. Aspect **3:4**.*
+
+![青空を踏む白](./assets/t2i-aozora-wo-fumu-shiro.jpg)
+
+**Prompt (English, paste-ready):**
+```text
+Vertical 3:4 photoreal fashion portrait. Extreme low-angle wide close shot from asphalt height at a wide Japanese summer intersection. Woman in her 20s: right knee down (left of frame), left knee raised high toward camera (right of frame), white chunky lace-up platform sandal filling lower-right foreground with strong wide-angle perspective. Calm downward gaze to the low camera, face slightly tilted. Soft features, elongated brown eyes, natural undereye, soft bright brown brows, clean nose, translucent coral-pink lips; sheer pink-beige eyeshadow, subtle blush. Bright brown shoulder-length medium hair, thin sheer bangs, face-framing layers, light wind in the tips. White thin-strap ribbed cropped camisole with lace trim; white high-waist wrap mini skort with gathers and thin drawstring; white thick-soled lace-up sandals. Left hand resting on raised left knee; right hand near asphalt. Mid-rise buildings, street trees, poles, transformers, tangled wires converging skyward, crosswalk, tiny pedestrians; upper frame vivid blue sky and white cumulus. Hard high summer sun, sharp asphalt shadows. Natural skin texture, clear fabric and sandal-lace detail, sharp face and foreground leg, slightly softer background. Fresh blue-and-white summer grade, warm skin tones, no heavy beauty filter, no exaggerated HDR. Not mirrored.
+```
+
+**Negative:**
+```text
+mirrored / left-right flip, left hand detached from raised left knee, deformed toes, deformed sandal straps, extra limbs, warped anatomy
+```
+
+**Full pack (日本語 / 中文 / English structured + I2V follow-up):**  
+[`prompts/t2i-fashion-portraits.md`](./prompts/t2i-fashion-portraits.md)
+
+---
+
+## 11. Resources
 
 ### Official
 
@@ -509,6 +535,7 @@ Stable multi-subject consistency, photoreal, gentle steadicam follow.
 - [Kling 3.0 Prompt Guide (Atlabs)](https://www.atlabs.ai/blog/kling-3-0-prompting-guide-master-ai-video-generation) — Layered formula + multi-shot patterns
 - In-repo: [`prompts/prompt-formula.md`](./prompts/prompt-formula.md)
 - In-repo: [`prompts/commercial-use-cases.md`](./prompts/commercial-use-cases.md)
+- In-repo: [`prompts/t2i-fashion-portraits.md`](./prompts/t2i-fashion-portraits.md) — T2I fashion portraits
 
 ### APIs, SDKs & tooling
 
@@ -546,9 +573,9 @@ Stable multi-subject consistency, photoreal, gentle steadicam follow.
 
 ---
 
-## 11. Contributing
+## 12. Contributing
 
-Contributions are welcome! If you have an **awesome Kling AI prompt**, workflow, or tool, please open a Pull Request.
+Contributions are welcome! If you have an **awesome Kling AI prompt** (T2V / I2V / T2I), workflow, or tool, please open a Pull Request.
 
 1. Fork the repo.
 2. Create a new branch.
@@ -575,7 +602,7 @@ Please do **not** submit copyrighted media you do not have rights to redistribut
 
 ---
 
-## 12. Star History
+## 13. Star History
 
 <a href="https://star-history.com/#DSeaStar/awesome-kling&Date">
  <picture>
