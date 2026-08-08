@@ -16,23 +16,52 @@ Inspired by [awesome-seedance](https://github.com/ZeroLu/awesome-seedance).
 
 ## 📖 Table of Contents
 
-1. [Prompt Formula (Start Here)](#1-prompt-formula-start-here)
-2. [Cinematic Film Styles](#2-cinematic-film-styles)
-3. [Advertising & Commercial Branding](#3-advertising--commercial-branding)
-4. [Social Media & Viral Memes](#4-social-media--viral-memes)
-5. [UGC Style](#5-ugc-style)
-6. [Anime & Animation Styles](#6-anime--animation-styles)
-7. [Short-form Drama & Web Series](#7-short-form-drama--web-series)
-8. [Visual Effects & Experimental Styles](#8-visual-effects--experimental-styles)
-9. [Motion Control & Character Consistency](#9-motion-control--character-consistency)
-10. [Text-to-Image (T2I)](#10-text-to-image-t2i)
+> **Ordering rule:** Within each category, **new prompts are always inserted at the top** (newest first).
+
+2. [Text-to-Image (T2I)](#1-text-to-image-t2i)
+3. [Prompt Formula (Start Here)](#2-prompt-formula-start-here)
+4. [Cinematic Film Styles](#3-cinematic-film-styles)
+5. [Advertising & Commercial Branding](#4-advertising--commercial-branding)
+6. [Social Media & Viral Memes](#5-social-media--viral-memes)
+7. [UGC Style](#6-ugc-style)
+8. [Anime & Animation Styles](#7-anime--animation-styles)
+9. [Short-form Drama & Web Series](#8-short-form-drama--web-series)
+10. [Visual Effects & Experimental Styles](#9-visual-effects--experimental-styles)
+1. [Motion Control & Character Consistency](#10-motion-control--character-consistency)
 11. [Resources (API, SDK & How-to-use)](#11-resources)
 12. [Contributing](#12-contributing)
 13. [Star History](#13-star-history)
 
 ---
 
-## 1. Prompt Formula (Start Here)
+## 1. Text-to-Image (T2I)
+
+Kling Image / 可灵生图 prompts. Full multi-language packs live under [`prompts/`](./prompts/).
+
+> In this section (and every category in this repo): **new prompts always go first**.
+
+### 1.1. 青空を踏む白 / White Stepping on Blue Sky
+
+*Extreme low-angle summer crosswalk fashion portrait — pure white outfit, vivid blue sky, wide-angle leg foreground. Aspect **3:4**.*
+
+![青空を踏む白](./assets/t2i-aozora-wo-fumu-shiro.jpg)
+
+**Prompt (English, paste-ready):**
+```text
+Vertical 3:4 photoreal fashion portrait. Extreme low-angle wide close shot from asphalt height at a wide Japanese summer intersection. Woman in her 20s: right knee down (left of frame), left knee raised high toward camera (right of frame), white chunky lace-up platform sandal filling lower-right foreground with strong wide-angle perspective. Calm downward gaze to the low camera, face slightly tilted. Soft features, elongated brown eyes, natural undereye, soft bright brown brows, clean nose, translucent coral-pink lips; sheer pink-beige eyeshadow, subtle blush. Bright brown shoulder-length medium hair, thin sheer bangs, face-framing layers, light wind in the tips. White thin-strap ribbed cropped camisole with lace trim; white high-waist wrap mini skort with gathers and thin drawstring; white thick-soled lace-up sandals. Left hand resting on raised left knee; right hand near asphalt. Mid-rise buildings, street trees, poles, transformers, tangled wires converging skyward, crosswalk, tiny pedestrians; upper frame vivid blue sky and white cumulus. Hard high summer sun, sharp asphalt shadows. Natural skin texture, clear fabric and sandal-lace detail, sharp face and foreground leg, slightly softer background. Fresh blue-and-white summer grade, warm skin tones, no heavy beauty filter, no exaggerated HDR. Not mirrored.
+```
+
+**Negative:**
+```text
+mirrored / left-right flip, left hand detached from raised left knee, deformed toes, deformed sandal straps, extra limbs, warped anatomy
+```
+
+**Full pack (日本語 / 中文 / English structured + I2V follow-up):**  
+[`prompts/t2i-fashion-portraits.md`](./prompts/t2i-fashion-portraits.md)
+
+---
+
+## 2. Prompt Formula (Start Here)
 
 Kling 3.0 responds best to **cinematic direction**, not keyword soup. Full breakdown: [`prompts/prompt-formula.md`](./prompts/prompt-formula.md).
 
@@ -75,11 +104,11 @@ Commercial playbooks (CN): [`prompts/commercial-use-cases.md`](./prompts/commerc
 
 ---
 
-## 2. Cinematic Film Styles
+## 3. Cinematic Film Styles
 
 Professional cinematic approaches optimized for **Kling 3.0** multi-shot and native audio.
 
-### 2.1. Hollywood Night Rain Racing
+### 3.1. Hollywood Night Rain Racing
 
 *Le Mans energy — dual-driver tension, wet asphalt, green-light launch.*
 
@@ -95,7 +124,7 @@ Duration: 12s. Multi-shot.
 Photorealistic, IMAX feel, coherent faces, natural rain physics, 4K.
 ```
 
-### 2.2. Denis Villeneuve Desert Escape
+### 3.2. Denis Villeneuve Desert Escape
 
 *Epic scale, desaturated palette, nature vs. machine.*
 
@@ -111,7 +140,7 @@ Duration: 12s.
 Photorealistic, catastrophic scale, stable vehicle geometry.
 ```
 
-### 2.3. Wong Kar-wai Rainy Phone Booth
+### 3.3. Wong Kar-wai Rainy Phone Booth
 
 *Nostalgic Hong Kong art-cinema mood with emotional restraint.*
 
@@ -129,7 +158,7 @@ Duration: 10s.
 Handheld, shallow DOF, emotionally intense, photorealistic film look.
 ```
 
-### 2.4. Neon Tokyo Rain Sequence
+### 3.4. Neon Tokyo Rain Sequence
 
 *Blade Runner 2049 lighting language with timed shot escalation.*
 
@@ -143,7 +172,7 @@ Handheld, shallow DOF, emotionally intense, photorealistic film look.
 Hyper-realistic, 8K feel, Blade Runner 2049 cinematography, Roger Deakins lighting.
 ```
 
-### 2.5. Samurai at Sunset (Time-coded)
+### 3.5. Samurai at Sunset (Time-coded)
 
 *Hitchcock vertigo + Kurosawa scale in one 15s beat.*
 
@@ -157,7 +186,7 @@ Hyper-realistic, 8K feel, Blade Runner 2049 cinematography, Roger Deakins lighti
 Hyper-realistic, 8K, Akira Kurosawa cinematography.
 ```
 
-### 2.6. Jazz Pianist with Native Audio
+### 3.6. Jazz Pianist with Native Audio
 
 *Performance scene — use Kling native audio / dialogue-friendly phrasing.*
 
@@ -171,11 +200,11 @@ Audio: crisp piano attack, walking bassline, brushed snare, breathy sax melody, 
 
 ---
 
-## 3. Advertising & Commercial Branding
+## 4. Advertising & Commercial Branding
 
 Use **Kling AI** for product showcases, brand films, and high-end commercials.
 
-### 3.1. Luxury Perfume Commercial (Time-coded)
+### 4.1. Luxury Perfume Commercial (Time-coded)
 
 **Prompt:**
 ```text
@@ -187,7 +216,7 @@ Use **Kling AI** for product showcases, brand films, and high-end commercials.
 Hyper-realistic fashion commercial, 8K feel, product-stable geometry.
 ```
 
-### 3.2. Sports Drink Ad
+### 4.2. Sports Drink Ad
 
 **Prompt:**
 ```text
@@ -200,7 +229,7 @@ Generate a premium 12-second sports drink commercial for the product in the refe
 Brisk pacing, high-end commercial grade, 4K, consistent bottle design.
 ```
 
-### 3.3. Minimal Brand Lifestyle Film
+### 4.3. Minimal Brand Lifestyle Film
 
 **Prompt:**
 ```text
@@ -211,7 +240,7 @@ Camera: slow push-ins and empty-frame transitions.
 Nordic / Japanese minimal aesthetic, calm voiceover space, soft ambient room tone.
 ```
 
-### 3.4. Drone Product Replacement Ad
+### 4.4. Drone Product Replacement Ad
 
 **Prompt:**
 ```text
@@ -226,11 +255,11 @@ More commercial recipes: [`prompts/commercial-use-cases.md`](./prompts/commercia
 
 ---
 
-## 4. Social Media & Viral Memes
+## 5. Social Media & Viral Memes
 
 Attention-first vertical and meme-ready setups for short platforms.
 
-### 4.1. Giant Orange Cat City Meme
+### 5.1. Giant Orange Cat City Meme
 
 **Prompt:**
 ```text
@@ -244,7 +273,7 @@ Duration: 15s. Vertical 9:16 preferred.
 Comedic, photoreal physics, stable giant-scale lighting.
 ```
 
-### 4.2. Street Argument with On-screen Emphasis
+### 5.2. Street Argument with On-screen Emphasis
 
 **Prompt:**
 ```text
@@ -254,7 +283,7 @@ The other in denim jacket replies: "Who cares. A pretzel's a pretzel!"
 Clear lip-sync, natural rain ambience, meme-ready framing, photorealistic.
 ```
 
-### 4.3. One-Take Hook Vertical
+### 5.3. One-Take Hook Vertical
 
 **Prompt:**
 ```text
@@ -265,11 +294,11 @@ Handheld phone aesthetic, natural noise, no music until the last beat drop.
 
 ---
 
-## 5. UGC Style
+## 6. UGC Style
 
 User-generated aesthetics — phone camera energy with controlled surreal twists.
 
-### 5.1. Bathroom Mirror Glitch Vlog
+### 6.1. Bathroom Mirror Glitch Vlog
 
 **Prompt:**
 ```text
@@ -283,7 +312,7 @@ Duration: 15s.
 Must feel like a "network delay" of the reflection, photoreal, no horror gore.
 ```
 
-### 5.2. Product Unboxing UGC
+### 6.2. Product Unboxing UGC
 
 **Prompt:**
 ```text
@@ -293,7 +322,7 @@ Casual English dialogue: "Okay wait — this packaging is actually insane."
 UGC realism, mild handheld shake, authentic skin texture, 9:16.
 ```
 
-### 5.3. Reference Character Speaks Audio
+### 6.3. Reference Character Speaks Audio
 
 **Prompt:**
 ```text
@@ -304,11 +333,11 @@ Natural room light, stable identity, subtle head motion, photorealistic.
 
 ---
 
-## 6. Anime & Animation Styles
+## 7. Anime & Animation Styles
 
 Character action, style consistency, and dynamic motion tests.
 
-### 6.1. Martial Arts Tournament Clash
+### 7.1. Martial Arts Tournament Clash
 
 **Prompt:**
 ```text
@@ -318,7 +347,7 @@ Keep both character designs consistent with input images.
 Fast cuts between wide clash, close-up grit, and final blow freeze.
 ```
 
-### 6.2. Otter Mecha Anime Battle
+### 7.2. Otter Mecha Anime Battle
 
 **Prompt:**
 ```text
@@ -327,7 +356,7 @@ The otter gives a grim thumbs up, then pilots the mech into battle against a mar
 Dynamic camera, cel-shaded highlights, kinetic action, coherent mecha design.
 ```
 
-### 6.3. Van Gogh Living Painting
+### 7.3. Van Gogh Living Painting
 
 **Prompt:**
 ```text
@@ -341,7 +370,7 @@ Entire world slowly flows and breathes along brushstroke directions.
 Painterly motion, no photoreal faces, dreamy atmosphere.
 ```
 
-### 6.4. Motion Graphics from Style Boards
+### 7.4. Motion Graphics from Style Boards
 
 **Prompt:**
 ```text
@@ -352,11 +381,11 @@ Bold shapes, clean timing, snappy transitions.
 
 ---
 
-## 7. Short-form Drama & Web Series
+## 8. Short-form Drama & Web Series
 
 Mini-drama hooks optimized for vertical feeds and emotional beats.
 
-### 7.1. Rainy Night Emotional Mini-Drama
+### 8.1. Rainy Night Emotional Mini-Drama
 
 **Prompt:**
 ```text
@@ -372,7 +401,7 @@ Characters: wealthy male lead (black coat, wet hair, red-rimmed eyes) vs stubbor
 Cinematic rain, stable faces, clear lip-sync.
 ```
 
-### 7.2. Viral CEO Reversal (Vertical)
+### 8.2. Viral CEO Reversal (Vertical)
 
 **Prompt:**
 ```text
@@ -386,7 +415,7 @@ Duration: 15s.
 Dramatic lighting, clear emotional beats, photoreal.
 ```
 
-### 7.3. 10s Stage Sketch Comedy
+### 8.3. 10s Stage Sketch Comedy
 
 **Prompt:**
 ```text
@@ -397,11 +426,11 @@ Audience laugh lighting pulse, confetti ending, 16:9 stage camera language.
 
 ---
 
-## 8. Visual Effects & Experimental Styles
+## 9. Visual Effects & Experimental Styles
 
 Spectacle, physics, and surreal concepts.
 
-### 8.1. Sky Zipper Surrealism
+### 9.1. Sky Zipper Surrealism
 
 **Prompt:**
 ```text
@@ -415,7 +444,7 @@ Duration: 15s.
 Photoreal VFX, coherent scale transitions.
 ```
 
-### 8.2. Orbital Station Collision
+### 9.2. Orbital Station Collision
 
 **Prompt:**
 ```text
@@ -427,7 +456,7 @@ Earth looms serene in background.
 Hyper-realistic, orbital debris logic, Gravity-film energy, 8K feel.
 ```
 
-### 8.3. Simple I2V Physics
+### 9.3. Simple I2V Physics
 
 **Prompt:**
 ```text
@@ -436,7 +465,7 @@ Subtle environmental motion first (wind, cloth, particles), then primary subject
 Preserve composition and identity. Natural motion blur. Photorealistic.
 ```
 
-### 8.4. Fluid Morph Between Photos
+### 9.4. Fluid Morph Between Photos
 
 **Prompt:**
 ```text
@@ -446,11 +475,11 @@ Seamless identity transitions, continuous camera energy, no hard cuts, dreamlike
 
 ---
 
-## 9. Motion Control & Character Consistency
+## 10. Motion Control & Character Consistency
 
 Kling-native strengths: **Motion Control**, **Elements / subject binding**, multi-image reference, and identity lock.
 
-### 9.1. Motion Control Retarget
+### 10.1. Motion Control Retarget
 
 **Prompt:**
 ```text
@@ -460,7 +489,7 @@ Preserve identity, face, and clothing from the image; ignore the motion video's 
 Smooth retargeting, no limb distortion, cinematic lighting, photorealistic.
 ```
 
-### 9.2. Character Series Consistency
+### 10.2. Character Series Consistency
 
 **Prompt:**
 ```text
@@ -472,7 +501,7 @@ Same wardrobe, same face, coherent age and hairstyle.
 Anime-cinematic or photoreal as specified by references.
 ```
 
-### 9.3. Fashion Lookbook with Elements
+### 10.3. Fashion Lookbook with Elements
 
 **Prompt:**
 ```text
@@ -482,7 +511,7 @@ Each look: walk cycle medium shot + full-body hero pose + fabric detail close-up
 Clean studio, soft fashion lighting, vertical 9:16.
 ```
 
-### 9.4. Multi-Reference Scene Build
+### 10.4. Multi-Reference Scene Build
 
 **Prompt:**
 ```text
@@ -490,31 +519,6 @@ Combine references: character from @image1, location from @image2, product from 
 Character walks through the location, naturally interacts with the product, glances to camera, slight smile.
 Stable multi-subject consistency, photoreal, gentle steadicam follow.
 ```
-
----
-
-## 10. Text-to-Image (T2I)
-
-Kling Image / 可灵生图 prompts. Full multi-language packs live under [`prompts/`](./prompts/).
-
-### 10.1. 青空を踏む白 / White Stepping on Blue Sky
-
-*Extreme low-angle summer crosswalk fashion portrait — pure white outfit, vivid blue sky, wide-angle leg foreground. Aspect **3:4**.*
-
-![青空を踏む白](./assets/t2i-aozora-wo-fumu-shiro.jpg)
-
-**Prompt (English, paste-ready):**
-```text
-Vertical 3:4 photoreal fashion portrait. Extreme low-angle wide close shot from asphalt height at a wide Japanese summer intersection. Woman in her 20s: right knee down (left of frame), left knee raised high toward camera (right of frame), white chunky lace-up platform sandal filling lower-right foreground with strong wide-angle perspective. Calm downward gaze to the low camera, face slightly tilted. Soft features, elongated brown eyes, natural undereye, soft bright brown brows, clean nose, translucent coral-pink lips; sheer pink-beige eyeshadow, subtle blush. Bright brown shoulder-length medium hair, thin sheer bangs, face-framing layers, light wind in the tips. White thin-strap ribbed cropped camisole with lace trim; white high-waist wrap mini skort with gathers and thin drawstring; white thick-soled lace-up sandals. Left hand resting on raised left knee; right hand near asphalt. Mid-rise buildings, street trees, poles, transformers, tangled wires converging skyward, crosswalk, tiny pedestrians; upper frame vivid blue sky and white cumulus. Hard high summer sun, sharp asphalt shadows. Natural skin texture, clear fabric and sandal-lace detail, sharp face and foreground leg, slightly softer background. Fresh blue-and-white summer grade, warm skin tones, no heavy beauty filter, no exaggerated HDR. Not mirrored.
-```
-
-**Negative:**
-```text
-mirrored / left-right flip, left hand detached from raised left knee, deformed toes, deformed sandal straps, extra limbs, warped anatomy
-```
-
-**Full pack (日本語 / 中文 / English structured + I2V follow-up):**  
-[`prompts/t2i-fashion-portraits.md`](./prompts/t2i-fashion-portraits.md)
 
 ---
 
@@ -579,10 +583,12 @@ Contributions are welcome! If you have an **awesome Kling AI prompt** (T2V / I2V
 
 1. Fork the repo.
 2. Create a new branch.
-3. Add your prompt under the correct category with the next available number.
-4. Include **Source** (original creator link) whenever the prompt is not original.
-5. Prefer prompts that state **duration**, **shot structure**, and **camera language**.
-6. Submit PR.
+3. Add your prompt under the correct category **at the top of that section** (newest first — never append to the bottom).
+4. Renumber subsections so the new entry is `X.1` and previous items shift down.
+5. Include **Source** (original creator link) whenever the prompt is not original.
+6. Prefer prompts that state **duration**, **shot structure**, and **camera language** (for T2I: aspect ratio + camera).
+7. Update both `README.md` (Chinese homepage) and `README-en.md`.
+8. Submit PR.
 
 ### Prompt submission template
 

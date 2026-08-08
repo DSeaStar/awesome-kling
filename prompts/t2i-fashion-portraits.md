@@ -2,6 +2,8 @@
 
 > Text-to-Image prompts for Kling Image / 可灵生图. Structured like a fashion brief: subject → expression → wardrobe → light → camera → texture → negatives.
 
+**排序规则 / Ordering：** 新增条目一律插到本文最前面（最新优先）。New entries always go at the top.
+
 ---
 
 ## 1. 青空を踏む白 / 踏蓝天的白 / White Stepping on Blue Sky
