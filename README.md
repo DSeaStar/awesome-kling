@@ -1,4 +1,4 @@
-Last updated on 2026-08-14 12-38-08
+Last updated on 2026-08-14 14-22-37
 
 # Awesome Kling AI 🎬
 
@@ -677,10 +677,14 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 
 - [Kling AI 国际站](https://kling.ai/) — 官方产品
 - [可灵 AI（快手）](https://klingai.kuaishou.com/) — 国内入口
+- [Kling VIDEO 3.0 使用指南](https://kling.ai/quickstart/klingai-video-3-model-user-guide) — 原生音频、多镜头、15 秒、AI Director
 - [Kling VIDEO 3.0 Omni 使用指南](https://kling.ai/quickstart/klingai-video-3-omni-model-user-guide) — 多模态、多镜头、原生音频
+- [Kling VIDEO 3.0 运动控制指南](https://kling.ai/quickstart/motion-control-user-guide) — 参考视频驱动、面部绑定、朝向模式
 - [Kling 官方提示词指南](https://kling.ai/blog/kling-ai-prompt-guide) — 镜头、光影、对白、多镜头
 - [可灵开放平台 API 概览](https://kling.ai/document-api/quickStart/productIntroduction/overview) — 官方 API
 - [文生视频 API（3.0 Omni）](https://kling.ai/document-api/api/video/3-0-omni/text-to-video) — T2V 文档
+- [图生视频 API（3.0 Omni）](https://kling.ai/document-api/api/video/3-0-omni/image-to-video) — I2V 文档
+- [运动控制 API](https://kling.ai/document-api/api/video/motion-control) — 官方动作迁移接口
 
 ### 提示词指南
 

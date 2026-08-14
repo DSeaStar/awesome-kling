@@ -1,4 +1,4 @@
-Last updated on 2026-08-14 12-38-08
+Last updated on 2026-08-14 14-22-37
 
 # Awesome Kling AI 🎬
 
@@ -675,10 +675,14 @@ Stable multi-subject consistency, photoreal, gentle steadicam follow.
 
 - [Kling AI (Global)](https://kling.ai/) — Official product
 - [Kling AI (China / Kuaishou)](https://klingai.kuaishou.com/) — CN product entry
+- [Kling VIDEO 3.0 Model Guide](https://kling.ai/quickstart/klingai-video-3-model-user-guide) — Native audio, multi-shot, 15s, AI Director
 - [Kling VIDEO 3.0 Omni User Guide](https://kling.ai/quickstart/klingai-video-3-omni-model-user-guide) — Multi-modal, multi-shot, native audio
+- [Kling VIDEO 3.0 Motion Control User Guide](https://kling.ai/quickstart/motion-control-user-guide) — Reference-video motion transfer, face binding, orientation modes
 - [Kling AI Prompt Guide](https://kling.ai/blog/kling-ai-prompt-guide) — Official prompting: camera, lighting, dialogue, multi-shot
 - [Kling Open Platform API Overview](https://kling.ai/document-api/quickStart/productIntroduction/overview) — Official API docs
 - [Text-to-Video API (3.0 Omni)](https://kling.ai/document-api/api/video/3-0-omni/text-to-video) — T2V reference
+- [Image-to-Video API (3.0 Omni)](https://kling.ai/document-api/api/video/3-0-omni/image-to-video) — I2V reference
+- [Motion Control API](https://kling.ai/document-api/api/video/motion-control) — Official motion-transfer endpoint
 
 ### Prompting guides
 
