@@ -685,6 +685,7 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 ### 提示词指南
 
 - [Kling 3.0 Prompting Guide（fal.ai）](https://blog.fal.ai/kling-3-0-prompting-guide/) — 电影意图与结构
+- [How to Use Kling 3.0 Pro in 2026（fal）](https://fal.ai/learn/tools/how-to-use-kling-3-0-pro) — 多镜头、运镜、Elements、定价
 - [Kling 3.0 Prompt Guide（Atlabs）](https://www.atlabs.ai/blog/kling-3-0-prompting-guide-master-ai-video-generation) — 分层公式
 - 本仓库：[`prompts/prompt-formula.md`](./prompts/prompt-formula.md)
 - 本仓库：[`prompts/commercial-use-cases.md`](./prompts/commercial-use-cases.md)
