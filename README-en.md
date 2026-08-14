@@ -683,6 +683,7 @@ Stable multi-subject consistency, photoreal, gentle steadicam follow.
 ### Prompting guides
 
 - [Kling 3.0 Prompting Guide (fal.ai)](https://blog.fal.ai/kling-3-0-prompting-guide/) — Cinematic intent, structure, API notes
+- [How to Use Kling 3.0 Pro in 2026 (fal)](https://fal.ai/learn/tools/how-to-use-kling-3-0-pro) — Multi-shot, camera, Elements, pricing
 - [Kling 3.0 Prompt Guide (Atlabs)](https://www.atlabs.ai/blog/kling-3-0-prompting-guide-master-ai-video-generation) — Layered formula + multi-shot patterns
 - In-repo: [`prompts/prompt-formula.md`](./prompts/prompt-formula.md)
 - In-repo: [`prompts/commercial-use-cases.md`](./prompts/commercial-use-cases.md)
