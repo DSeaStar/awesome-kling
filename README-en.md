@@ -1,14 +1,17 @@
 Last updated on 2026-10-06 17-32-34
 
-# Awesome Kling AI 🎬
+# Awesome Kling AI 🎬 Kling 4.0 / 3.0 Prompts
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE) [![GitHub stars](https://img.shields.io/github/stars/DSeaStar/awesome-kling?style=social)](https://github.com/DSeaStar/awesome-kling/stargazers)
 
 | [简体中文](./README.md) | [English](./README-en.md) |
 
-> A curated collection of the **best Kling AI / Kling 3.0 prompts**, **text-to-image (T2I)** fashion briefs, video generation techniques, Motion Control workflows, and developer resources for **Kuaishou Kling**.
+> **A Kling prompt library for creators and marketers.** Every prompt is traced to its original post and organized by what you're making: 30-second ads, e-commerce, short drama, UGC talking-head. Swap a few words and generate.
 
-This repository focuses on **high-fidelity Kling prompts** for Kling 3.0 / Omni, I2V & Seedance (from X), T2I portraits, cinematic film, advertising, UGC, anime, short drama, and VFX — plus **API guides**, SDKs, and production workflows so you can ship real products on top of Kling.
+> [!IMPORTANT]
+> **Model status (Oct 2026):** Kling says Kling 4.0 launches in October; Kling 4.0 Flash opened to limited early access on Sept 28. 4.0-specific prompts are being added in the [Kling 4.0 section](#0-kling-40).
+
+**Start in three steps:** ① pick a prompt by use case below → ② replace the [bracketed] parts with your product or character → ③ paste into Kling; if it looks off, read that entry's pitfalls and re-run.
 
 Inspired by [awesome-seedance](https://github.com/ZeroLu/awesome-seedance) (sibling list). See [CONTRIBUTING-en.md](./CONTRIBUTING-en.md) and the [weekly crawl log](./docs/x-crawl-log.md).
 
@@ -16,8 +19,9 @@ Inspired by [awesome-seedance](https://github.com/ZeroLu/awesome-seedance) (sibl
 
 ## 📖 Table of Contents
 
-> **Ordering rule:** New prompts always go first within each section. **Kling 3.0 / Omni** is pinned to the top.
+> **Ordering rule:** New prompts always go first within each section. **Kling 4.0** is pinned to the top; Kling 3.0 / Omni follows.
 
+0. [Kling 4.0](#0-kling-40)
 1. [Kling 3.0 / Omni](#1-kling-30--omni)
 2. [Image-to-Video I2V (from X)](#2-image-to-video-i2v-from-x)
 3. [Seedance Prompts (from X)](#3-seedance-prompts-from-x)
@@ -36,6 +40,33 @@ Inspired by [awesome-seedance](https://github.com/ZeroLu/awesome-seedance) (sibl
 16. [Star History](#16-star-history)
 
 ---
+
+## 0. Kling 4.0
+
+> **Status:** Skeleton only. Real prompts land after Kling 4.0 ships. Spec numbers cite public reports (Sep/Oct 2026); untested items are marked **待实测 / TBD**. **No invented prompts.**
+
+### 0.1. 4.0 vs 3.0 prompting cheat sheet
+
+| Capability | Public spec | Prompting tip | Status |
+|------------|-------------|---------------|--------|
+| Clip length | Native 3–30s | Write timed beats; don't dump one long paragraph | TBD |
+| Keyframes | Up to 10 | Number them (KF1…KF10) and refer back in motion text | TBD |
+| Multi-reference | Images + video clips + subjects (reports cite up to ~15 refs) | Name each reference's role in the prompt | TBD |
+| Output | 4K / 1080p 10-bit HDR (HDR and 2-min extension marked coming soon) | — | TBD |
+
+> Flash (limited early access): up to 20s, 720p, 8-bit SDR. Table will update when full 4.0 is live.
+
+### 0.2. 30s ad storyboard template
+
+> **Placeholder.** Plan: rewrite existing [7.1 Luxury Perfume](#71-luxury-perfume-commercial-time-coded) and [7.2 Sports Drink](#72-sports-drink-ad) as single-pass 30s 4.0 versions. No prompts written yet.
+
+### 0.3. Multi-keyframe product showcase
+
+> **Placeholder.** Plan: e-commerce hero image → 360° showcase with 3–5 keyframes. No prompts written yet.
+
+### 0.4. 3.0 vs 4.0 same-prompt bake-off
+
+> **Placeholder.** Plan: after launch, re-run 10 existing entries side-by-side with comparison GIFs. No bake-offs yet.
 
 ## 1. Kling 3.0 / Omni
 
