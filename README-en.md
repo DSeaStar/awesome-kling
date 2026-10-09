@@ -9,7 +9,7 @@ Last updated on 2026-10-06 17-32-34
 > **A Kling prompt library for creators and marketers.** Every prompt is traced to its original post and organized by what you're making: 30-second ads, e-commerce, short drama, UGC talking-head. Swap a few words and generate.
 
 > [!IMPORTANT]
-> **Model status (Oct 2026):** Kling says Kling 4.0 launches in October; Kling 4.0 Flash opened to limited early access on Sept 28. 4.0-specific prompts are being added in the [Kling 4.0 section](#0-kling-40).
+> **Model status (2026-10-09):** Kling.ai now leads with All-New Kling 4.0; official @Kling_ai posted "Following the launch of Kling 4.0". 4.0 prompts are being added in the [Kling 4.0 section](#0-kling-40).
 
 **Start in three steps:** ① pick a prompt by use case below → ② replace the [bracketed] parts with your product or character → ③ paste into Kling; if it looks off, read that entry's pitfalls and re-run.
 
@@ -43,7 +43,7 @@ Inspired by [awesome-seedance](https://github.com/ZeroLu/awesome-seedance) (sibl
 
 ## 0. Kling 4.0
 
-> **Status:** Skeleton only. Real prompts land after Kling 4.0 ships. Spec numbers cite public reports (Sep/Oct 2026); untested items are marked **待实测 / TBD**. **No invented prompts.**
+> **Status:** Official has launched; homepage leads with All-New Kling 4.0. Spec numbers cite public reports (Sep/Oct 2026); prompts still TBD (untested items marked **待实测 / TBD**). **No invented prompts.**
 
 ### 0.1. 4.0 vs 3.0 prompting cheat sheet
 
