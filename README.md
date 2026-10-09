@@ -1,14 +1,17 @@
 Last updated on 2026-10-09 17-40-05
 
-# Awesome Kling AI 🎬
+# Awesome Kling AI 🎬 可灵 4.0 / 3.0 提示词精选
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE) [![GitHub stars](https://img.shields.io/github/stars/DSeaStar/awesome-kling?style=social)](https://github.com/DSeaStar/awesome-kling/stargazers)
 
 | [简体中文](./README.md) | [English](./README-en.md) |
 
-> **可灵 Kling AI / Kling 3.0** 优质提示词、**文生图（T2I）** 时尚肖像、视频生成技巧、运动控制工作流与开发者资源的精选集合（快手可灵）。
+> **给做内容和做营销的人用的可灵提示词库。** 每条标注原帖来源，按"30 秒广告、电商、短剧、UGC 口播"等真实用途分类，拿来改几个词就能用。
 
-本仓库专注于**高保真 Kling 提示词**：Kling 3.0 / Omni、I2V / Seedance（X 精选）、T2I 肖像、电影感、广告、UGC、动漫、短剧、特效，以及 **API / SDK / 生产工作流**，帮助你把可灵真正用到产品和内容流水线里。
+> [!IMPORTANT]
+> **模型状态（2026-10-09）：** 可灵官网已主推 All-New Kling 4.0；官方 X 以 "Following the launch of Kling 4.0" 表述。本仓库正在补 4.0 写法，见 [4.0 专区](#0-kling-40-专区)。
+
+**三步上手：** ① 在下方目录按用途挑一条 → ② 把方括号里的内容换成你的产品或角色 → ③ 粘贴到可灵生成，不满意就看该条的"避坑"再跑一次。
 
 结构与风格参考 [awesome-seedance](https://github.com/ZeroLu/awesome-seedance)（**sibling 互链**）。欢迎阅读 [CONTRIBUTING.md](./CONTRIBUTING.md) 与 [周更日志](./docs/x-crawl-log.md)。
 
@@ -16,8 +19,9 @@ Last updated on 2026-10-09 17-40-05
 
 ## 📖 目录
 
-> **排序规则：** 各类别内**新增提示词一律插到该节最前面**（最新优先）。Kling 3.0 / Omni 专区已置顶。
+> **排序规则：** 各类别内**新增提示词一律插到该节最前面**（最新优先）。**Kling 4.0 专区**置顶；其后为 Kling 3.0 / Omni。
 
+0. [Kling 4.0 专区](#0-kling-40-专区)
 1. [Kling 3.0 / Omni 专区](#1-kling-30--omni-专区)
 2. [图生视频 I2V（X 精选）](#2-图生视频-i2vx-精选)
 3. [Seedance 提示词（X 精选）](#3-seedance-提示词x-精选)
@@ -36,6 +40,33 @@ Last updated on 2026-10-09 17-40-05
 16. [Star 历史](#16-star-历史)
 
 ---
+
+## 0. Kling 4.0 专区
+
+> **状态：** 官方已上线；可灵官网主推 All-New Kling 4.0。规格数字引自官方公开信息（2026-09/10）；提示词仍待补充（未实测处标「待实测」）。**不编造提示词。**
+
+### 0.1. 4.0 与 3.0 写法差异速查
+
+| 能力 | 官方规格（公开报道） | 提示词写法建议 | 状态 |
+|------|---------------------|----------------|------|
+| 单次时长 | 原生 3–30 秒 | 按时间段写 timed beats，勿一句话写到底 | 待实测 |
+| 关键帧 | 最多 10 张 | 编号引用（KF1…KF10），运动描述里可回指 | 待实测 |
+| 多参考 | 图 + 视频 + 主体组合（报道合称最多约 15 个参考） | 在提示词里点名每个参考的角色 | 待实测 |
+| 输出 | 4K / 1080p 10-bit HDR（HDR 与 2 分钟延长标注「即将推出」） | — | 待确认 |
+
+> Flash（小范围体验）：最长 20 秒、720p、8-bit SDR。完整版上线后本表会更新。
+
+### 0.2. 30 秒广告分镜模板
+
+> **占位。** 计划把现有 [7.1 奢侈香水](#71-奢侈香水广告时间码)、[7.2 运动饮料](#72-运动饮料广告) 改写成 4.0 单次 30 秒版本。尚未写入提示词。
+
+### 0.3. 多关键帧产品展示
+
+> **占位。** 计划：电商主图 → 360° 展示，3–5 张关键帧。尚未写入提示词。
+
+### 0.4. 3.0 vs 4.0 同提示词对照
+
+> **占位。** 计划：4.0 上线后挑 10 条老条目重跑，每条配对比 GIF。尚未写入对照。
 
 ## 1. Kling 3.0 / Omni 专区
 
