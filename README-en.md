@@ -1,4 +1,4 @@
-Last updated on 2026-10-06 17-32-34
+Last updated on 2026-10-15 15-54-24
 
 # Awesome Kling AI 🎬 Kling 4.0 / 3.0 Prompts
 
@@ -9,7 +9,7 @@ Last updated on 2026-10-06 17-32-34
 > **A Kling prompt library for creators and marketers.** Every prompt is traced to its original post and organized by what you're making: 30-second ads, e-commerce, short drama, UGC talking-head. Swap a few words and generate.
 
 > [!IMPORTANT]
-> **Model status (2026-10-09):** Kling.ai now leads with All-New Kling 4.0; official @Kling_ai posted "Following the launch of Kling 4.0". 4.0 prompts are being added in the [Kling 4.0 section](#0-kling-40).
+> **Model status (2026-10-15):** Official: Kling 4.0 is now fully available (web creation studio + MCP/CLI); see [@Kling_ai](https://x.com/Kling_ai/status/2110747537187709424). 4.0 prompts live in the [Kling 4.0 section](#0-kling-40).
 
 **Start in three steps:** ① pick a prompt by use case below → ② replace the [bracketed] parts with your product or character → ③ paste into Kling; if it looks off, read that entry's pitfalls and re-run.
 
