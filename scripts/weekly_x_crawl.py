@@ -328,7 +328,7 @@ def main() -> int:
         "path": str(out_path.relative_to(ROOT)).replace("\\", "/"),
     }
     summary_path = CANDIDATES_DIR / f"{date}.json"
-    summary_path.write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    summary_path.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(summary))
     return 0
 
