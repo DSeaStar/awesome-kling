@@ -1,4 +1,4 @@
-Last updated on 2026-11-05 04-02-15
+Last updated on 2026-11-05 19-11-32
 
 # Awesome Kling AI 🎬 可灵 4.0 / 3.0 提示词精选
 
