@@ -1,4 +1,4 @@
-Last updated on 2026-11-06 18-38-24
+Last updated on 2026-11-07 03-36-21
 
 # Awesome Kling AI 🎬 Kling 4.0 / 3.0 Prompts
 
