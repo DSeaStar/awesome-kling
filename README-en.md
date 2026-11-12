@@ -43,30 +43,329 @@ Inspired by [awesome-seedance](https://github.com/ZeroLu/awesome-seedance) (sibl
 
 ## 0. Kling 4.0
 
-> **Status:** Official has launched; homepage leads with All-New Kling 4.0. Spec numbers cite public reports (Sep/Oct 2026); prompts still TBD (untested items marked **待实测 / TBD**). **No invented prompts.**
+> **Status (2026-11-09, Asia/Shanghai):** Kling 4.0 is fully available (web creation studio + API). Specs and prompting advice below cite the official user guide, the multiple-keyframes blog, the launch article, and the API changelog; table rows link out where possible. Every prompt in this section is an **adaptable template**, rewritten from the repo’s existing [§7.1 Luxury Perfume Commercial](#71-luxury-perfume-commercial-time-coded) and [§7.2 Sports Drink Ad](#72-sports-drink-ad) plus official public writing guidance. These are **not** community- or maintainer-tested final-film prompts. Anything we have not generated ourselves is marked **template · untested (pending your run)**. No fabricated test results.
+
+Official docs:
+- [Kling 4.0 User Guide](https://kling.ai/quickstart/kling-4-model-user-guide)
+- [Multiple Keyframes: How to Control a 30-Second AI Video](https://kling.ai/blog/kling-4-multiple-keyframes-guide)
+- [Introducing Kling 4.0: Visual Realism, Creative Control, and Next-Level Storytelling](https://kling.ai/blog/kling40-kling-visual-realism-creative-control-introducing-storytelling)
+- [API Updates](https://kling.ai/document-api/updates/api.md) (4.0 generally available on 2026-10-28; Flash API on 2026-11-04)
 
 ### 0.1. 4.0 vs 3.0 prompting cheat sheet
 
-| Capability | Public spec | Prompting tip | Status |
-|------------|-------------|---------------|--------|
-| Clip length | Native 3–30s | Write timed beats; don't dump one long paragraph | TBD |
-| Keyframes | Up to 10 | Number them (KF1…KF10) and refer back in motion text | TBD |
-| Multi-reference | Images + video clips + subjects (reports cite up to ~15 refs) | Name each reference's role in the prompt | TBD |
-| Output | 4K / 1080p 10-bit HDR (HDR and 2-min extension marked coming soon) | — | TBD |
+| Capability | Official spec | Prompting tip | Source |
+|------------|---------------|---------------|--------|
+| Clip length | Native **3–30s** (user guide: 1-second steps, default 10s) | Write timed beats for the action / camera / sound **between** nodes; do not dump one long paragraph | [User guide](https://kling.ai/quickstart/kling-4-model-user-guide) · [Keyframe blog](https://kling.ai/blog/kling-4-multiple-keyframes-guide) |
+| Flash | API (2026-11-04): **3–20s** at **720p**. Official capability map: Flash does **not** support multiple keyframes | Use Flash to iterate; finish on full 4.0. Flash image-to-video currently documents a single first-frame image | [API 11/04](https://kling.ai/document-api/updates/api.md) · [Capability map](https://kling.ai/document-api/guides/capability-map/video.md) |
+| Multiple keyframes | Up to about **10** keyframe images per generation | Keyframes control **when** something changes: each one should answer “what must the viewer see at this moment?” You do not need all 10; add a frame only when the visual state truly changes | [Keyframe blog](https://kling.ai/blog/kling-4-multiple-keyframes-guide) |
+| Prompt tone | Descriptive, positive language; minimize abstract terms and negative instructions | Replace “premium look” with light, material, props, and framing. Official exceptions: **no subtitles** and **no background music** (the model may add these by default) | [User guide §2.2](https://kling.ai/quickstart/kling-4-model-user-guide) |
+| Reference roles | Uploads are numbered in order (`@Image1`, `@Video1`, …) | Give **each reference one clear job** (identity / product / scene / camera). IDs with no role cause the model to infer | [User guide](https://kling.ai/quickstart/kling-4-model-user-guide) · [Omni API](https://kling.ai/document-api/api/video/4-0/video-omni.md) |
+| Keyframes vs prompt | Keyframes are visual anchors on the timeline; the prompt explains what happens between them | Describe actions, transitions, camera moves, dialogue, pacing, and sound in the prompt. The prompt timeline must match keyframe order | [Keyframe blog](https://kling.ai/blog/kling-4-multiple-keyframes-guide) |
+| Keyframes + Omni Reference | See “two official wordings” below | Plan as: keyframes = when it changes; Omni = what stays consistent. At submit time, follow your current studio entry or API path | [Keyframe blog FAQ](https://kling.ai/blog/kling-4-multiple-keyframes-guide) · [User guide](https://kling.ai/quickstart/kling-4-model-user-guide) |
+| Prompt length | Studio / launch article: up to about **8,000 tokens**. API (2026-10-28): about 26,000 English characters or 11,000 non-English | Longer is not automatically better. Use extra length only for what keyframes cannot show | [Keyframe blog](https://kling.ai/blog/kling-4-multiple-keyframes-guide) · [Launch article](https://kling.ai/blog/kling40-kling-visual-realism-creative-control-introducing-storytelling) · [API Updates](https://kling.ai/document-api/updates/api.md) |
+| Multi-reference cap | About **15** combined references per task (images + videos + subjects/elements + voices); up to 10 images, up to 5 videos (total duration ≤ 30s), up to 7 elements (including up to 3 video subjects) | Lock consistency with references; write intended changes into keyframes and the prompt so inputs do not conflict | [User guide](https://kling.ai/quickstart/kling-4-model-user-guide) · [Launch article](https://kling.ai/blog/kling40-kling-visual-realism-creative-control-introducing-storytelling) |
+| Output | User guide lists 720p / 1080p / **4K**, 21:9 / 16:9 / 1:1 / 9:16 / Auto, 2-channel stereo; 10-bit HDR is listed for 1080p and 4K. The API changelog (2026-10-28) still says “10-bit 4K coming soon” | Check the options in your current studio or API. The launch article also marks extension up to about 2 minutes as coming soon (**unverified** for your account) | [User guide](https://kling.ai/quickstart/kling-4-model-user-guide) · [Launch article](https://kling.ai/blog/kling40-kling-visual-realism-creative-control-introducing-storytelling) · [API 10/28](https://kling.ai/document-api/updates/api.md) |
 
-> Flash (limited early access): up to 20s, 720p, 8-bit SDR. Table will update when full 4.0 is live.
+**Can keyframes and Omni Reference share one task? Two official wordings (follow your current UI):**
 
-### 0.2. 30s ad storyboard template
+1. The [multiple-keyframes blog FAQ](https://kling.ai/blog/kling-4-multiple-keyframes-guide) (2026-09-30) answers *Can I use Multiple Keyframes with Omni Reference?* with **Yes**. The article splits the jobs: keyframes define **when** something should change; Omni Reference helps define **what** should stay consistent.
+2. The [user guide](https://kling.ai/quickstart/kling-4-model-user-guide) describes two creation-studio entry points: **Omni Reference** (default, most complete; text-to-video and keyframe-to-video are also available here) and a separate **Keyframes** entry. Quote: *The capabilities of the two entry points cannot be combined within a single generation task.* The standalone Keyframes entry **does not support uploading reference assets**.
+3. The official [Omni API](https://kling.ai/document-api/api/video/4-0/video-omni.md) (`/omni-video/kling-4.0`) accepts `first_frame` / `middle_frame` / `last_frame` **and** `refer_image` in the same `contents` list, and tells you to keep `first_frame` first and `last_frame` last when they are combined with reference images. The standalone [image-to-video / keyframe API](https://kling.ai/document-api/api/video/4-0/image-to-video.md) says: if you also need reference videos, elements, or other reference assets, use the Omni endpoint instead.
+4. Some third-party studios split the modes. [JXP’s Kling 4.0 prompt guide](https://www.jxp.com/kling/blog/kling-4-0-prompt-guide) (2026-10-29) says its studio separates Text / Reference / Keyframes and relays the user-guide rule that the two cannot be merged in one task.
 
-> **Placeholder.** Plan: rewrite existing [7.1 Luxury Perfume](#71-luxury-perfume-commercial-time-coded) and [7.2 Sports Drink](#72-sports-drink-ad) as single-pass 30s 4.0 versions. No prompts written yet.
+**Practical takeaway:** At the capability layer (blog + Omni API), plan as if they can work together: references lock identity, keyframes lock timing. If your current UI treats Omni and Keyframes as mutually exclusive entries, pick the one that expresses the main constraint. Follow the interface or API path in front of you.
+
+**Official prompt order (user guide):** reference roles → overall settings → time-stamped event sequence → audio. A seven-part checklist for *what* to decide: Subject + Action + Setting + Camera + Lighting + Pacing + Sound (formula relayed from official launch guidance; the user guide organizes the words into four blocks).
+
+### 0.2. 30s ad storyboard templates
+
+Rewritten from [§7.1](#71-luxury-perfume-commercial-time-coded) / [§7.2](#72-sports-drink-ad), expanded to the official 30-second product-ad keyframe rhythm (0s establish character and setting → 6s introduce the product → 12s move into product use → 20s shift scene or camera → 28s land on the final product hero shot). Status for both: **template · untested (pending your run)**.
+
+#### 0.2.1 Luxury perfume, 30 seconds
+
+*Adapted from [§7.1 Luxury Perfume Commercial (Time-coded)](#71-luxury-perfume-commercial-time-coded) (original ~15s: macro bottle and peonies → hand enters → slow-motion spray → hero lockup) plus the [official keyframe planning table](https://kling.ai/blog/kling-4-multiple-keyframes-guide).*
+
+- **Status:** template · untested (pending your run)
+- **Entry points:**
+  - **Plain timed-text version** → text-to-video (Omni Reference default entry with no uploads, or a Text-to-Video control)
+  - **Keyframe-plan version** → Keyframes mode; upload 5 images you prepare, anchored at 0 / 6 / 12 / 20 / 28s. You do not need all 10 slots
+  - If your UI or the Omni API lets you attach a reference as well: use `@Image1` only to lock the bottle, and let keyframes handle composition
+- **Duration:** 30s (native maximum; matches the official 0 / 6 / 12 / 20 / 28 product-ad example)
+- **Aspect ratio:** 16:9 for a landscape commercial; change 【aspect ratio】 to 9:16 for feeds
+- **Replaceable slots:** 【aspect ratio】【brand name】【bottle look】【flowers】【hand details】【mist color】【music yes/no】
+
+**A. Plain timed-text version (paste-ready)**
+
+```text
+【Aspect ratio: 16:9】. One continuous 30-second luxury perfume commercial, photoreal fashion-advertising look, geometrically stable product.
+
+Setting: a vanity table in warm afternoon light. A pale cream linen cloth, several 【pink peonies】 in a clear glass vase, petal edges outlined in gold by a left rim light. Behind them, a softly blurred beige wall and a fall of silk curtain. Fine dust motes drift in the air.
+
+Product: a single 【rectangular amber-glass perfume bottle with a matte black cube cap and a small white front label that reads "【BRAND NAME】"】. Keep the bottle’s proportions, label lettering, and cap material identical throughout. The bottle does not warp; the label stays readable.
+
+Character: one 【right feminine hand, warm natural skin, short rounded bare-pink nails, no ring】 entering from the right. Only this hand appears; no full face.
+
+Pacing: the first 12 seconds are slow, quiet, and approaching; 12–20 seconds complete the spray; after 20 seconds the frame grows darker and the mist more visible; the last 2 seconds hold a clean hero lockup.
+
+0–6s: Establish the setting. Medium-close shot, almost locked camera with an extremely slow push-in. First we see the sunlit vanity, the 【pink peonies】, and slowly falling petals. The perfume bottle sits farther back on the left and is not yet the visual center. Shallow depth of field, flowers slightly soft in the foreground.
+
+6–12s: Introduce the product. The camera glides along the tabletop and focus shifts from the flowers to the bottle. Before 12 seconds, the full bottle is visible. Rim light shows the thickness of the amber glass and the fine matte grain on the cap. One petal brushes the bottle’s shoulder.
+
+12–20s: Product use. The same hand enters from the right, fingertips touch the glass, lift the bottle, and the index finger presses the atomizer. Slow-motion 【pale gold】 mist; the background drops darker and rim light makes each droplet visible. The hand moves naturally. The bottle’s shape and label stay stable while it moves.
+
+20–28s: Shift the camera. Cut to a closer rim-lit angle: mist drifts and a thread of it settles on a peony petal. The camera makes a very slow quarter-orbit around the now-stationary bottle, keeping the full bottle in frame and the label toward camera. Do not change the product appearance, tabletop material, and lighting style at the same time.
+
+28–30s: End on a clean product hero shot. The complete bottle sits slightly left of center, with a deeper, emptier space on the right for later type. Volumetric light from back-left, cream minimal background, bottle perfectly still. Hold.
+
+Audio: very quiet room tone, a silk rustle, a short atomizer hiss, a faint petal landing. No subtitles. No background music.
+```
+
+**B. Keyframe plan (you supply the 5 images)**
+
+Per the [official advice](https://kling.ai/blog/kling-4-multiple-keyframes-guide), each frame should answer “what must the viewer see at this point?” Do not add extra frames just to fill the quota.
+
+| Time | ID | What this image must show | Job of this frame |
+|------|----|---------------------------|-------------------|
+| 0s | KF0 | Warm afternoon vanity and 【pink peonies】; the 【bottle】 farther back on the left, not centered | Establish the setting; product is not yet the hero |
+| 6s | KF6 | Full bottle in sharp focus, 【BRAND NAME】 label readable; flowers recede into foreground or background blur | Introduce the product |
+| 12s | KF12 | The same 【hand】 touching or lifting the bottle, atomizer about to be pressed or just pressed | Move into product use |
+| 20s | KF20 | Darker background, 【pale gold】 mist, closer rim-lit angle; bottle still complete | Shift camera and atmosphere |
+| 28s | KF28 | Clean hero lockup: complete bottle, centered or left with copy space, cream minimal background | Land on the product hero shot |
+
+**C. Keyframe-mode companion prompt (paste-ready; describe motion between frames, not the pictures you already uploaded)**
+
+```text
+Use the uploaded keyframes as visual anchors on the timeline: KF0 at 0s, KF6 at 6s, KF12 at 12s, KF20 at 20s, KF28 at 28s. The prompt only describes how the video moves between these nodes. Do not rewrite the composition, bottle, or lighting already fixed in each keyframe.
+
+A 30-second 【aspect ratio: 16:9】 photoreal luxury perfume commercial. Bottle geometry, the label "【BRAND NAME】", and cap material stay consistent with the keyframes.
+
+0–6s: Start from KF0’s established setting. The camera pushes in very slowly across the vanity, petals drift down, and focus eases from the flowers toward the farther bottle, arriving at KF6 at 6 seconds.
+6–12s: The camera keeps gliding closer. The 【feminine right hand】 enters from the right, fingertips touch the glass, and she lifts the bottle, arriving at KF12’s held, ready-to-spray pose at 12 seconds.
+12–20s: The index finger presses the atomizer and 【pale gold】 mist sprays in slow motion. The background darkens; rim light picks out the droplets. After the action, the camera transitions into KF20’s closer rim-lit angle.
+20–28s: Mist keeps drifting. The camera makes a very slow orbit around the still bottle and lands on KF28’s hero frame at 28 seconds.
+28–30s: Hold KF28. The bottle does not move.
+
+Audio: room tone, silk rustle, atomizer hiss. No subtitles. No background music.
+```
+
+**Pitfalls:**
+1. Do not change character, setting, product, style, and camera all in one keyframe — the [official guide lists this as a common mistake](https://kling.ai/blog/kling-4-multiple-keyframes-guide). Advance one main change at a time.
+2. The prompt timeline must match keyframe order. If the prompt sprays at the opening while KF12 is the first use beat, the direction conflicts.
+3. Avoid abstract phrases such as “premium look” or “luxurious mood”; write rim light, amber-glass thickness, and matte grain instead. Apart from “no subtitles” and “no background music,” minimize negative instructions ([user guide](https://kling.ai/quickstart/kling-4-model-user-guide)).
+4. Fine label type is easily redrawn. Put 【BRAND NAME】 in the prompt and use a large, sharp label in KF6 and KF28.
+
+#### 0.2.2 Sports drink, 30 seconds
+
+*Adapted from [§7.2 Sports Drink Ad](#72-sports-drink-ad) (original ~12s: ice-bead macro → athlete drinks → fast cuts of sprint / high-five / spin → lockup with slogan space) plus the same official 0 / 6 / 12 / 20 / 28 rhythm.*
+
+- **Status:** template · untested (pending your run)
+- **Entry points:**
+  - **Plain timed-text version** → text-to-video; if you have a pack shot, use Omni Reference and let `@Image1` lock the bottle only
+  - **Keyframe-plan version** → Keyframes mode, 5 images you prepare, anchored at 0 / 6 / 12 / 20 / 28s
+- **Duration:** 30s. The original §7.2 is a brisk 12-second piece; once you stretch it to 30s, keep the “fast cuts” inside 20–28s so the opening is not already over-edited
+- **Aspect ratio:** 16:9 (broadcast feel) or 9:16 (feeds)
+- **Replaceable slots:** 【aspect ratio】【drink name】【bottle look】【athlete details】【location】【slogan-space placement】
+
+**A. Plain timed-text version (paste-ready)**
+
+```text
+【Aspect ratio: 16:9】. A 30-second sports-drink commercial, photoreal commercial grade, steady at first and faster later.
+
+Product: one 【frosted translucent plastic sports bottle filled with fluorescent orange-green liquid, a white sport cap, and a front label that reads "【DRINK NAME】"】. Keep the bottle structure, liquid color, and label identical throughout. The bottle does not warp.
+
+Character: a 【woman athlete around twenty-five, short hair, deep skin tone, black fitted tank and shorts, a thin silver bracelet on her left wrist】. It is the same person in every beat; hair, wardrobe, and bracelet do not change.
+
+Setting: a 【city outdoor running track】 at dawn, dark-gray rubber lane, glass towers and leftover streetlight glow in the distance. The air is cold; a thin mist hangs near the ground.
+
+Pacing: 0–12s build thirst and introduce the product; 12–20s open and drink; 20–28s accelerate into a sprint and a high-five; the last 2 seconds are a clean product lockup with room for a slogan.
+
+0–6s: Establish setting and character. A medium-wide shot, camera creeping forward at a low angle along the track. The athlete does one last warm-up near the start line, her breath visible, and has not reached for the drink yet. The track, the city dawn, and her black kit are clearly readable.
+
+6–12s: Introduce the product. Cut to a macro of the bottle: the 【fluorescent orange-green】 liquid sits near center, ice beads sliding slowly down the wall, side rim light sparking along each bead, track thrown out of focus. Before 12 seconds the "【DRINK NAME】" label is fully readable. The athlete’s hand enters from above and grips the bottle but does not open it yet.
+
+12–20s: Product use. She twists off the white sport cap and drinks in a clean tilt. Some liquid leaves the mouth of the bottle in slow motion and hangs in the morning light; the city track stays as soft bokeh. Her face, short hair, and left-wrist bracelet match the earlier beats. The label remains identifiable in her hand.
+
+20–28s: Shift pace and camera. Three clear actions rather than a messy montage: (1) the same athlete sprints down the track still holding the same bottle; (2) she high-fives another runner; (3) the bottle makes a slow three-quarter turn against a clean background so the label faces camera again. Do not change the bottle design or wardrobe colors during these actions.
+
+28–30s: Product lockup. The complete bottle stands in the left third or the center, with a clean darker field on the right or above for 【one slogan line】. Liquid color, cap, and label match the rest of the film. Hold.
+
+Audio: dawn outdoor air, distant traffic, sliding ice beads, a cap click, a swallow and splash, sprint footsteps, one crisp high-five. No subtitles. No background music.
+```
+
+**B. Keyframe plan (you supply the 5 images)**
+
+| Time | ID | What this image must show | Job of this frame |
+|------|----|---------------------------|-------------------|
+| 0s | KF0 | 【City track】 at dawn; the 【short-haired athlete】 warming up at the start line; the bottle is not yet the visual center | Establish character and setting |
+| 6s | KF6 | Bottle macro: ice beads, 【fluorescent orange-green】 liquid, readable "【DRINK NAME】" label | Introduce the product |
+| 12s | KF12 | The same hand holding the bottle, cap about to come off or just off; athlete identity readable | Move into product use |
+| 20s | KF20 | The transition after drinking: she is about to sprint, or has taken the first stride; same bottle | Shift pace / camera |
+| 28s | KF28 | Complete bottle hero on a clean background, with slogan space to one side | Land on the product hero shot |
+
+**C. Keyframe-mode companion prompt (paste-ready)**
+
+```text
+Use the uploaded keyframes as visual anchors on the timeline: KF0 at 0s, KF6 at 6s, KF12 at 12s, KF20 at 20s, KF28 at 28s. The prompt only describes action, camera, and sound between the nodes. Do not rewrite the person, bottle, or location already fixed in each keyframe.
+
+A 30-second 【aspect ratio: 16:9】 photoreal sports-drink commercial. The bottle, the label "【DRINK NAME】", and the athlete’s short hair, black kit, and left-wrist silver bracelet stay consistent with the keyframes.
+
+0–6s: From KF0, the camera creeps forward at a low angle along the track while she finishes her warm-up, then transitions into KF6’s bottle macro at 6 seconds. Ice beads slide down the bottle.
+6–12s: Keep KF6’s product identity. The camera eases back slightly as her hand grips the bottle, arriving at KF12’s opening moment at 12 seconds.
+12–20s: She twists the cap off and drinks; splash in slow motion. She then stands and reaches KF20’s ready-to-sprint stance at 20 seconds.
+20–28s: The same person sprints, high-fives another runner, and the bottle slowly rotates against a clean background, landing on KF28’s hero lockup at 28 seconds.
+28–30s: Hold KF28. The bottle is still, with empty space on one side.
+
+Audio: morning wind, cap click, splash, footsteps, one high-five. No subtitles. No background music.
+```
+
+**Pitfalls:**
+1. Do not spread the original §7.2 “fast cuts” across the full 30 seconds. Official guidance is to mark keyframes only where the visual state truly changes; keep the faster rhythm inside 20–28s.
+2. Athlete identity and bottle design are two separate consistency locks. Repeat “the same person / the same bottle” in the prompt; if you have a pack shot, let `@Image1` lock the SKU only, and do not ask a character reference to also define the bottle.
+3. If you use keyframes, the jump from KF0’s wide shot to KF6’s macro is intentional. Write the transition (“from setting into macro”) so the model does not cut to a bottle close-up in 0–6s and steal KF6’s job.
 
 ### 0.3. Multi-keyframe product showcase
 
-> **Placeholder.** Plan: e-commerce hero image → 360° showcase with 3–5 keyframes. No prompts written yet.
+Turn one e-commerce hero still into a publishable product showcase (front → three-quarter → material close-up → light lifestyle → packshot with copy space). Status: **template · untested (pending your run)**.
 
-### 0.4. 3.0 vs 4.0 same-prompt bake-off
+- **Entry points:** Keyframes mode (3–5 images you prepare) as the spine; lock SKU consistency with Omni Reference `@Image1` if available. If your UI cannot put references and keyframes in the same task, either make the product crystal-clear *inside* the keyframe images, or run Omni alone first with the prompt below (it also works without keyframe uploads)
+- **Duration:** **20 seconds** (a showcase does not need the full 30s). To stretch to 30s, add about 2 seconds to each beat and move the final packshot from 18–20s to 28–30s
+- **Aspect ratio:** 1:1 is common for product cards; 9:16 for short-video shelves. After you upload keyframes, the user guide says aspect ratio follows the **first keyframe**
+- **Replaceable slots:** 【SKU type and look】【surface / background】【aspect ratio】【duration】【copy-space placement】【lifestyle scene yes/no】
 
-> **Placeholder.** Plan: after launch, re-run 10 existing entries side-by-side with comparison GIFs. No bake-offs yet.
+**A. Five-keyframe plan (recommended 20s)**
+
+| Time | ID | What must be visible | Job |
+|------|----|----------------------|-----|
+| 0s | KF0 | The 【SKU】 standing fully front-on on a 【light-gray marble surface】, label facing camera, matching the e-commerce hero | Hero pack shot |
+| 5s | KF1 | The same product at about a three-quarter angle so the side structure reads; label still identifiable | Show volume and side |
+| 10s | KF2 | Material / logo close-up: 【surface grain, seam, printed mark】 fills most of the frame, but the product is still recognizable | Material credibility |
+| 15s | KF3 | The same product in a light lifestyle setting (for example 【beside a gym bag / on a bathroom counter / in morning table light】), appearance unchanged | In-context use, still the same SKU |
+| 19s | KF4 | Back to a clean packshot: complete product, left or center, with empty space on one side for later selling points | Deliverable ending |
+
+Three-frame cutdown if five feels like too many: keep only KF0 (0s front), KF2 (10s material), and KF4 (19s packshot with copy space). The [official guide](https://kling.ai/blog/kling-4-multiple-keyframes-guide) says not to add frames that do not change the visual state.
+
+**B. Paste-ready prompt (action / camera / product consistency; works with or without keyframes once you fill the slots)**
+
+```text
+【Aspect ratio: 1:1】. A 【20】-second e-commerce product showcase, photoreal commercial stills come to life, one SKU only, continuous and restrained.
+
+@Image1 defines the SKU itself. Preserve its shape, proportions, color, materials, label, and printing exactly. Do not invent new packaging structure and do not rewrite or remove fine label type.
+@Image2 defines only the surface and environmental light: 【light-gray marble, soft window light from 45 degrees left, a clean pale background】. Do not treat any other object that may appear in @Image2 as a second product.
+(optional) @Image3 defines only the lifestyle space around 15 seconds and does not change the product.
+(optional) @Video1 is referenced only for the slow orbit pacing; do not copy its product or location.
+
+Each reference has one job.
+
+Product: 【a matte white charging case with two matching true-wireless earbuds and a pale-gray debossed mark on the lid】. Only this SKU appears; color and structure do not drift.
+
+0–5s: Start on the front hero. The complete product sits slightly below center. Camera is locked except for an extremely slow push-in. Rim light traces the lid edge; a very weak reflection sits on the surface.
+5–10s: The product itself stays still (or rides a very slow, level turntable) while the camera orbits about 90 degrees clockwise to a three-quarter view. The mark stays on a readable side.
+10–15s: Push into a material and mark close-up. Focus lands on the 【debossed logo and the lid seam】; the background falls away. Do not change the product’s color, corner radius, or structure.
+15–18s: Move into a light lifestyle placement: the same product sits beside 【a dark gym bag and a folded cool-toned towel】, with window light from the same direction as before. The product still matches @Image1 exactly.
+18–20s: Return to a clean packshot. The complete product sits left or center, with an even field of light or dark gray on the right for selling-point type. The product is still. Hold.
+
+Light: window light from 45 degrees left as the key, plus a very weak frontal fill on the product’s facing side. Avoid empty black holes.
+Audio: very quiet interior room tone. No voiceover. No subtitles. No background music.
+```
+
+**C. Example Omni Reference role map**
+
+| Reference | Only job | How to write it |
+|-----------|----------|-----------------|
+| `@Image1` | SKU identity | `@Image1` defines the product. Preserve shape, color, material, and label. |
+| `@Image2` | Scene / surface | `@Image2` defines the surface and light; do not borrow other objects from it as the product. |
+| `@Image3` | Lifestyle space (optional) | `@Image3` only provides the space around 15 seconds and does not change the product. |
+| `@Video1` | Camera rhythm (optional) | `@Video1` is referenced only for orbit speed, not for product or location. |
+| Keyframes KF0–KF4 | Composition at timed nodes | Write “arrive at KFx at Ns”; do not ask a keyframe to also be a second product identity |
+
+**Pitfalls:**
+1. Do not ask one reference to lock product identity, scene, *and* style. The user guide wants a purpose and scope for each asset; otherwise the model infers.
+2. Keyframe images and `@Image1` must show the same SKU in the same colorway. A white case in the reference and a black case in a keyframe is the kind of conflict the official guide warns about.
+3. Fine type, ingredient lists, and small logos are often redrawn (a third-party observation, not a guarantee). Make marks large and sharp in the keyframes, and name “keep the printed mark” in the prompt.
+4. Aspect ratio follows the first keyframe after upload — crop all five images to the same ratio so KF0 is not 1:1 while later frames jump to 9:16.
+5. The standalone Keyframes entry, per the user guide, cannot take reference uploads. If you need `@Image1` to lock the SKU, prefer the Omni entry or Omni API, and follow your current UI.
+
+### 0.4. 3.0 vs 4.0 same-prompt bake-off protocol
+
+This is not a results write-up. It is a checklist you can run. The repo does not yet have 4.0 comparison films; re-run the same inputs and fill the blank table at the end. An earlier plan to pick 10 entries is narrowed here to **5 older prompts worth running first**, covering product geometry, person + product, native dialogue / lip-sync, two-person lip-sync, and Omni product replacement.
+
+#### Five older entries to re-run
+
+| # | Entry (README anchor) | What the original is testing | How to run it on 4.0 |
+|---|-----------------------|------------------------------|----------------------|
+| 1 | [§7.1 Luxury Perfume Commercial (Time-coded)](#71-luxury-perfume-commercial-time-coded) | ~15s product geometry + timecode | First run the original text at the original length as 4.0 text-to-video; then run a second job with the §0.2.1 30s expansion (keyframes optional) |
+| 2 | [§7.2 Sports Drink Ad](#72-sports-drink-ad) | ~12s bottle consistency + a person drinking | Run the original + a product reference on both 3.0 and 4.0; optionally add a §0.2.2 pass on 4.0 |
+| 3 | [§1.1 Late-night rehearsal vlog (native dialogue)](#11-late-night-rehearsal-vlog-native-dialogue) | Native dialogue, lip-sync, handheld vlog | Native audio on for both; on 4.0 you may rewrite the beats with timestamps and add “no subtitles” |
+| 4 | [§8.2 Street Argument with On-screen Emphasis](#82-street-argument-with-on-screen-emphasis) | Two-person argument lip-sync | Re-run the original text; record whether each mouth matches its line and whether burned-in subtitles appear |
+| 5 | [§7.4 Drone Product Replacement Ad](#74-drone-product-replacement-ad) | Reference-video pacing + reference-image product swap | Use the same `@video1` / `@image1` on 3.0 Omni and 4.0 Omni Reference; on 4.0, give each reference one job as the user guide asks |
+
+#### Input control table (change only the model version if you can)
+
+Fill the “your settings” cells before you submit, so you are not reconstructing the job later.
+
+| Control | Suggested shared value | Entry 1 perfume | Entry 2 drink | Entry 3 rehearsal | Entry 4 argument | Entry 5 drone |
+|---------|------------------------|-----------------|---------------|-------------------|------------------|---------------|
+| Model A | Your current Kling 3.0 / 3.0 Omni | | | | | |
+| Model B | Kling 4.0 (do not pick Flash unless you are explicitly testing Flash) | | | | | |
+| Resolution | 1080p on both (Flash tops out at 720p) | | | | | |
+| Duration | Use the original length first; log any 30s 4.0 expansion on its own row | 15s / extra 30s | 12s / extra 30s | ~10s (follow the original beats) | Original is untimed; try 8–10s | Follow `@video1`, ≤30s |
+| Aspect ratio | Same on both sides | 16:9 | 16:9 or 9:16 | 16:9 | 16:9 | Follow `@video1` |
+| Keyframes | Off for original-text bake-off; on for the §0.2 expansions | Off / optional on 30s | Off / optional on 30s | Off | Off | Off |
+| References | Match whatever the original prompt already asks for | None, or optional pack shot | Prefer product `@Image1` | None | None | Required: `@video1` for pacing, `@image1` for the drone |
+| Audio | Native audio on for dialogue entries; ads should say no background music and no subtitles | | | | | |
+| Prompt | Run the **same original text** first; log “4.0 expanded version” separately | | | | | |
+
+#### Fields to record while you watch
+
+- **Consistency (1–5):** Does the product shape, the face and wardrobe, or the location swap mid-clip?
+- **Lip-sync (1–5 or N/A):** Do mouths follow the written lines? If you did not listen, write “not audio-checked”
+- **Subtitle intrusion:** Yes / no / yes but croppable. The 4.0 user guide notes the model may burn subtitles in by default; write “no subtitles” when you do not want them
+- **Usable seconds:** How many seconds of a 30s (or original-length) file could go into an ad or a post without an edit
+- **Timing:** Do product appearance, first use, and the hero lockup land near the seconds you wrote (frame-accuracy not required)
+- **Other:** Extra fingers, redrawn labels, unrequested cuts, music that appeared on its own
+
+#### Suggested comparison GIF names
+
+Split-screen left/top = 3.0, right/bottom = 4.0. Keep the entry number, date, and mode in the filename so the files can later land in `assets/`:
+
+```text
+compare-7-1-perfume-20261109-3p0-vs-4p0.gif
+compare-7-1-perfume-20261109-4p0-30s-keyframes.gif
+compare-7-2-sportdrink-20261109-3p0-vs-4p0.gif
+compare-1-1-rehearsal-vlog-20261109-3p0-vs-4p0.gif
+compare-8-2-street-argument-20261109-3p0-vs-4p0.gif
+compare-7-4-drone-replace-20261109-3p0-vs-4p0.gif
+```
+
+#### Blank results table (fill this in)
+
+| Entry | Model | Duration | Resolution | Keyframes | References | Consistency 1–5 | Lip-sync 1–5 | Subtitle intrusion | Usable seconds | Timing roughly landed? | GIF filename | Notes |
+|-------|-------|----------|------------|-----------|------------|-----------------|--------------|--------------------|----------------|------------------------|--------------|-------|
+| 7.1 perfume original | 3.0 | | | no | | | N/A | | | | | |
+| 7.1 perfume original | 4.0 | | | no | | | N/A | | | | | |
+| 7.1 expanded 30s | 4.0 | 30s | | | | | N/A | | | | | |
+| 7.2 drink original | 3.0 | | | no | | | | | | | | |
+| 7.2 drink original | 4.0 | | | no | | | | | | | | |
+| 1.1 rehearsal | 3.0 | | | no | no | | | | | | | |
+| 1.1 rehearsal | 4.0 | | | no | no | | | | | | | |
+| 8.2 argument | 3.0 | | | no | no | | | | | | | |
+| 8.2 argument | 4.0 | | | no | no | | | | | | | |
+| 7.4 drone | 3.0 Omni | | | no | video+image | | N/A | | | | | |
+| 7.4 drone | 4.0 Omni | | | no | video+image | | N/A | | | | | |
+
+After you fill the table, if one 4.0 result is clearly more stable, consider promoting that *expanded prompt* (not a verbal claim) into the README, and mark the source as Original / repo adaptation per [CONTRIBUTING.md](./CONTRIBUTING.md).
+
+### Sources
+
+- [Kling 4.0 User Guide](https://kling.ai/quickstart/kling-4-model-user-guide) (two studio entries; descriptive positive prompts; minimize negatives; no subtitles / no background music; one job per reference; standalone Keyframes entry cannot take reference assets; the two entries’ capabilities cannot be combined in one generation task; Omni also supports text-to-video and keyframe-to-video)
+- [Kling 4.0 Multiple Keyframes: How to Control a 30-Second AI Video](https://kling.ai/blog/kling-4-multiple-keyframes-guide) (up to ~10 keyframes; 3–30s; you do not need all 10; 0 / 6 / 12 / 20 / 28 product-ad example; keyframes = when, Omni = what stays; write the in-between motion in the prompt; ~8,000 tokens and longer ≠ better; FAQ says keyframes can work alongside Omni Reference)
+- [Introducing Kling 4.0: Visual Realism, Creative Control, and Next-Level Storytelling](https://kling.ai/blog/kling40-kling-visual-realism-creative-control-introducing-storytelling) (native 30s, up to 10 keyframes, up to ~15 references, 8,000 tokens, stereo, multilingual; 10-bit HDR and extension to about 2 minutes marked coming soon in that article)
+- [API Updates](https://kling.ai/document-api/updates/api.md) (2026-10-28: 4.0 API generally available, native up to 30s, up to 10 keyframes; 2026-11-04: 4.0 Flash API, 3–20s at 720p)
+- [Omni Video Generation API](https://kling.ai/document-api/api/video/4-0/video-omni.md) (`contents` can include keyframe types and `refer_image` together)
+- [Image to Video API](https://kling.ai/document-api/api/video/4-0/image-to-video.md) (keyframe endpoint; switch to Omni if you also need reference videos / elements)
+- [Video Capability Map](https://kling.ai/document-api/guides/capability-map/video.md) (Flash does not support Multi-Keyframes)
+- Third-party note on entry points only: [JXP Kling 4.0 Prompt Guide](https://www.jxp.com/kling/blog/kling-4-0-prompt-guide) (2026-10-29; says the user guide forbids combining them in one task, and its studio splits Text / Reference / Keyframes)
+- This repo: [§7.1](#71-luxury-perfume-commercial-time-coded), [§7.2](#72-sports-drink-ad), [§1.1](#11-late-night-rehearsal-vlog-native-dialogue), [§8.2](#82-street-argument-with-on-screen-emphasis), [§7.4](#74-drone-product-replacement-ad)
 
 ## 1. Kling 3.0 / Omni
 
