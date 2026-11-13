@@ -1,0 +1,40 @@
+name: Refresh Kling 4.0 status (one-shot restore)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [chore/kling-4.0-readme-ci]
+    paths:
+      - '.github/workflows/refresh-kling-4.0-status.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: chore/kling-4.0-readme-ci
+          fetch-depth: 0
+
+      - name: Restore READMEs from pre-damage tip and refresh launch status
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          BASE=fb94bbaf3e9aefc5c7e667c635f5ddd0baf14e29
+          git show "$BASE:README.md" > README.md
+          git show "$BASE:README-en.md" > README-en.md
+
+          python3 scripts/refresh_kling_40_status.py
+
+          git add README.md README-en.md
+          if git diff --cached --quiet; then
+            echo "No staged changes (already refreshed?)."
+            exit 0
+          fi
+          git commit -m "docs: refresh Kling 4.0 status to launched (2026-10-09)"
+          git push
