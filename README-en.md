@@ -703,6 +703,7 @@ Stable multi-subject consistency, photoreal, gentle steadicam follow.
 | Project | Stars-ish | What it is |
 |---------|-----------|------------|
 | [KlingAIResearch/ComfyUI-KLingAI-API](https://github.com/KlingAIResearch/ComfyUI-KLingAI-API) | ~176 | Official-adjacent ComfyUI nodes for Kling API |
+| [Official Kling Claude plugins](https://github.com/klingai-tech/claude-plugin) · [China](https://github.com/klingai-tech/claude-plugin-cn) | — | Hosted MCP: [global](https://kling.ai/mcp/plugin) / [China](https://klingai.com/mcp/plugin); OAuth and paid personal-workspace credits; [plugin package and CLI](https://www.npmjs.com/package/@klingai/plugin-global) |
 | [199-mcp/mcp-kling](https://github.com/199-mcp/mcp-kling) | ~40 | MCP server for Kling video generation |
 | [vargHQ/sdk](https://github.com/vargHQ/sdk) | ~333 | JSX video SDK — one API for Kling, Flux, etc. |
 | [vericontext/vibeframe](https://github.com/vericontext/vibeframe) | ~164 | CLI + MCP for agent video gen (Kling, Veo, Seedance…) with cost caps |
