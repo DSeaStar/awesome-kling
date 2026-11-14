@@ -705,6 +705,7 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 | 项目 | 说明 |
 |------|------|
 | [KlingAIResearch/ComfyUI-KLingAI-API](https://github.com/KlingAIResearch/ComfyUI-KLingAI-API) | ComfyUI 可灵 API 节点 |
+| [可灵官方 Claude 插件](https://github.com/klingai-tech/claude-plugin-cn) · [全球版](https://github.com/klingai-tech/claude-plugin) | 托管 MCP：[国内](https://klingai.com/mcp/plugin) / [全球](https://kling.ai/mcp/plugin)；OAuth 登录，生成消耗个人空间积分；[完整插件包及 CLI](https://www.npmjs.com/package/@klingai/plugin-cn) |
 | [199-mcp/mcp-kling](https://github.com/199-mcp/mcp-kling) | Kling 视频生成 MCP Server |
 | [vargHQ/sdk](https://github.com/vargHQ/sdk) | JSX 视频 SDK，统一调用 Kling 等 |
 | [vericontext/vibeframe](https://github.com/vericontext/vibeframe) | Agent 用视频生成 CLI + MCP（成本上限） |
