@@ -719,6 +719,7 @@ Figure 1 与 Figure 2 在世界武道大会擂台对决。
 
 - [songguoxs/awesome-video-prompts](https://github.com/songguoxs/awesome-video-prompts) — Veo / Kling / Hailuo 提示词
 - [LichAmnesia/awesome-ad-video-prompts](https://github.com/LichAmnesia/awesome-ad-video-prompts) — 广告向提示词
+- [HotDance AI](https://hotdanceai.com/) · [按次付费 AI 舞蹈视频对比库](https://github.com/danielas2022/pay-as-you-go-ai-dance-video-generators) — 基于 Kling Motion Control 与 Seedance 2.0，支持免登录 0 积分预览与无订阅一次性积分包
 - [geekjourneyx/awesome-ai-video-prompts](https://github.com/geekjourneyx/awesome-ai-video-prompts) — 跨模型 AI 视频提示资源
 - [jnMetaCode/ai-shortfilm-prompts](https://github.com/jnMetaCode/ai-shortfilm-prompts) — 短片提示词 Skill
 - [Anil-matcha/awesome-ai-video-models](https://github.com/Anil-matcha/awesome-ai-video-models) — 模型 / API / 价格对比

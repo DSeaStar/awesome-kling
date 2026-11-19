@@ -717,6 +717,7 @@ Stable multi-subject consistency, photoreal, gentle steadicam follow.
 
 - [songguoxs/awesome-video-prompts](https://github.com/songguoxs/awesome-video-prompts) — Veo / Kling / Hailuo prompt pack
 - [LichAmnesia/awesome-ad-video-prompts](https://github.com/LichAmnesia/awesome-ad-video-prompts) — Ad-focused prompts (Kling / Seedance / Veo / Runway)
+- [HotDance AI](https://hotdanceai.com/) & [Pay-As-You-Go Dance Benchmark](https://github.com/danielas2022/pay-as-you-go-ai-dance-video-generators) — Kling Motion Control + Seedance 2.0 dance templates with 0-credit preview and one-time packs (no subscription)
 - [geekjourneyx/awesome-ai-video-prompts](https://github.com/geekjourneyx/awesome-ai-video-prompts) — Cross-model AI video prompting resources
 - [jnMetaCode/ai-shortfilm-prompts](https://github.com/jnMetaCode/ai-shortfilm-prompts) — Short-film prompt skill (Sora · Kling · Veo · Seedance)
 - [Anil-matcha/awesome-ai-video-models](https://github.com/Anil-matcha/awesome-ai-video-models) — Model / API / price comparison
