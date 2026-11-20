@@ -45,6 +45,9 @@ jobs:
           if [ -f "docs/x-crawl-candidates/${DATE}.json" ]; then
             echo "summary<<EOF" >> "$GITHUB_OUTPUT"
             cat "docs/x-crawl-candidates/${DATE}.json" >> "$GITHUB_OUTPUT"
+            # json.dumps() leaves no trailing newline; without this the EOF
+            # delimiter lands on the JSON's last line and the step fails.
+            echo "" >> "$GITHUB_OUTPUT"
             echo "EOF" >> "$GITHUB_OUTPUT"
           fi
 

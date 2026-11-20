@@ -1,0 +1,41 @@
+name: Apply Kling 4.0 README patch (one-shot)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [chore/kling-4.0-readme-ci]
+    paths:
+      - 'patches/2026-10-kling-4.0-readme.patch'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: chore/kling-4.0-readme-ci
+          fetch-depth: 0
+
+      - name: Apply patch and push
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git apply --check patches/2026-10-kling-4.0-readme.patch; then
+            git apply patches/2026-10-kling-4.0-readme.patch
+          else
+            echo "Patch already applied or does not apply cleanly; exiting."
+            exit 0
+          fi
+
+          git add README.md README-en.md scripts/weekly_x_crawl.py
+          if git diff --cached --quiet; then
+            echo "No staged changes."
+            exit 0
+          fi
+          git commit -m "docs: Kling 4.0 README hero + section skeleton; py JSON newline"
+          git push
