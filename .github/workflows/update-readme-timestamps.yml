@@ -1,8 +1,13 @@
 name: Update README Timestamps
 
 on:
-  schedule:
-    - cron: '0 */12 * * *'
+  # Only stamp README when real content changes, instead of every 12h.
+  push:
+    branches: [main]
+    paths:
+      - 'prompts/**'
+      - 'assets/**'
+      - 'docs/**'
   workflow_dispatch:
 
 permissions:
